@@ -26,7 +26,10 @@ export default {
   --main-light-color: #223e43;
   --main-color: #223e43;
   --main-dark-color: #152b2d;
+  --main-very-dark-color: #132729;
+  --accent-light-color: #e33452;
   --accent-color: #c3203c;
+  --accenr-dark-color: #ad102b;
   /* fonts */
   --main-font: 'Montserrat', sans-serif; 
   --title-color: 'Fredoka One', cursive;
