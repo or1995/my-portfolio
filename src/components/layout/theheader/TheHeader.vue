@@ -46,6 +46,7 @@ header {
     box-shadow: 4px -1px 11px -3px rgba(0,0,0,0.50);
     padding: .5rem;
     overflow: hidden;
+    z-index: 10000;
 }
 
 .logodiv {

@@ -45,7 +45,8 @@ export default {
 
  .o {
      fill: var(--main-light-color);
-     height: 2.7rem;
+     height: 2.6rem;
+     margin-right: -.3rem;
  }
 
  .logo:hover svg {
@@ -64,8 +65,9 @@ export default {
  }
 
  .small .o {
-     height: 1.4rem;
+     height: 1.3rem;
      transition: all .3s;
+     margin-right: -.1rem;
  }
 
 

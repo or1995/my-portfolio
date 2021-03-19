@@ -1,8 +1,20 @@
 <template>
-    <div class="card">
+    <div class="card" :data-aos="scrollan">
         <slot></slot>
     </div>
 </template>
+
+<script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+export default {
+    props: ['scrollan'],
+    created() {
+        AOS.init()
+    }
+}
+</script>
 
 <style scoped>
 .card {

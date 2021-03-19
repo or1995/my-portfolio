@@ -1,14 +1,17 @@
 <template>
     <div class="home">
         <home-head></home-head>
+        <home-projects></home-projects>
     </div>
 </template>
 
 <script>
 import HomeHead from './components/Head.vue';
+import HomeProjects from './components/Projects.vue';
 export default {
     components: {
-        HomeHead
+        HomeHead,
+        HomeProjects
     }
 }
 </script>
