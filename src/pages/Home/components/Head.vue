@@ -1369,7 +1369,7 @@ export default {
         background-color: var(--main-dark-color);
         background-size: cover;
         position: relative;
-        border: solid 5px var(--accent-color);
+       /* border: solid 5px var(--accent-color);*/ /* considering removing */
         overflow: hidden;
         transition: all .3s;
     }

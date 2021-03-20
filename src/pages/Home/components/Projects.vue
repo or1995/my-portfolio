@@ -2,9 +2,15 @@
     <div class="projects">
         <section-title text="projects"></section-title>
         <div class="cards">
-            <projects-project></projects-project>
-            <projects-project></projects-project>
-            <projects-project></projects-project>
+            <projects-project title="Hello Blog">
+                <img class="projectimg" src="../../../assets/projectspics/hello.png"/>
+            </projects-project>
+            <projects-project title="Social Media App">
+                <img class="projectimg" src="../../../assets/projectspics/social.png"/>
+            </projects-project>
+            <projects-project title="ECommerce">
+                <img class="projectimg" src="../../../assets/projectspics/ecommerce2.png"/>
+            </projects-project>
         </div>
     </div>
 </template>
@@ -34,5 +40,15 @@ export default {
 
     .cards div {
         width: 32.8%;
+    }
+
+    .projectimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .projectimg:hover {
+        transform: translateY(calc(-100% + 18rem));
+        transition: transform 8s;
     }
 </style>
