@@ -21,7 +21,7 @@ export default {
             console.log(window.scrollY);
             const lastKnownScrollPosition = window.scrollY;
 
-            if (lastKnownScrollPosition > 0) {
+            if (lastKnownScrollPosition > 200) {
                 this.notTop = true;
             } else {
                 this.notTop = false;
