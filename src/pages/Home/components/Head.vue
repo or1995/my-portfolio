@@ -31,7 +31,12 @@
                     <p>From choosing colors to writing code, I love every aspect of web development and I want to know as much as I can. I like my work to look good and to be easy to use for the end user.</p>
                     <div>
                         <base-button link to="/projects">My Projects</base-button>
+                        <base-button link to="/contact" invert>Contact Me</base-button>
                     </div>
+                </div>
+            </div>
+            <div class="mousewheel" ref="mousewheel">
+                <div>
                 </div>
             </div>
             <div class="arrows">
@@ -1341,20 +1346,14 @@
 
 export default {
     mounted() {
-        /*let tl = anime.timeline({
-            easing: 'easeOutExpo',
-            duration: 750
-        })
+        document.addEventListener('scroll', () => {
+            console.log(window.scrollY);
+            const lastKnownScrollPosition = window.scrollY;
 
-        tl.add({
-            targets: this.$refs.divide,
-            delay: 300,
-            height: '13rem'  
-        })
-
-        tl.add({
-            targets: this.$refs.divide
-        })*/
+            if (lastKnownScrollPosition > 0) {
+                this.$refs.mousewheel.style.opacity = "0";
+            } 
+        });
     }
 }
 </script>
@@ -1365,7 +1364,7 @@ export default {
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 40rem;
+        height: 96vh; /* maybe will be 40rem */
         background-color: var(--main-dark-color);
         background-size: cover;
         position: relative;
@@ -1411,7 +1410,7 @@ export default {
     .arrows {
         position: absolute;
         top: 0%;
-        left: 0%;
+        left: -10%;
         display: flex;
         width: 100%;
         height: 100%;
@@ -1425,7 +1424,7 @@ export default {
         align-items: center;
         justify-content: center;
         margin-left: 2.2rem;
-        animation: arrowsleft 10s linear infinite;
+        animation: arrowsleft 60s linear infinite;
     }
 
     .arrows1 {
@@ -1442,7 +1441,7 @@ export default {
         align-items: center;
         justify-content: center;
         margin-left: 2.2rem;
-        animation: arrowsright 10s linear infinite;
+        animation: arrowsright 60s linear infinite;
     }
 
     .arrows2 {
@@ -1510,7 +1509,7 @@ export default {
 
     .text p {
         font-family: var(--main-font);
-        font-weight: 500;
+        font-weight: 300;
         color: var(--light-text);
         font-size: 1.3rem;
         line-height: 1.4;
@@ -1519,6 +1518,34 @@ export default {
 
     .text div {
         width: 100%;
+        display: flex;
+    }
+
+    .text div a {
+        margin-right: .5rem;
+    }
+
+    .mousewheel {
+        position: absolute;
+        bottom: 5rem;
+        width: 2rem;
+        height: 6rem;
+        border: 2px solid var(--accent-color);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        border-radius: 15px;
+        z-index: 1000000;
+        opacity: 0.4;
+    }
+
+    .mousewheel div {
+        margin-top: 5px;
+        width: 1rem;
+        height: 2.5rem;
+        background-color: var(--accent-color);
+        border-radius: 8px;
+        animation: mousewheelani 1s infinite;
     }
 
 </style>
@@ -1596,6 +1623,15 @@ export default {
         100% {
             transform: translateX(0);
             margin-left: 2rem;
+        }
+    }
+
+    @keyframes mousewheelani {
+        0% {
+            margin-top: 5px;
+        }
+        100% {
+            margin-top: 150%;
         }
     }
 </style>

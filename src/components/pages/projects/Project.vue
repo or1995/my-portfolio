@@ -62,7 +62,7 @@ export default {
         transform: translateX(-100%);
         transition: all .3s;
         pointer-events: none;
-        z-index: 10000;
+        z-index: 10000000;
     }
 
     .title::before {

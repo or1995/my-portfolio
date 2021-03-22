@@ -2,7 +2,7 @@
     <base-card scrollan="fade-up">
         <div class="skill">
             <div class="title">
-                <h3>{{title}}</h3>
+                <h3><span>{{firstLetter}}</span>{{otherLetters}}</h3>
             </div>
             <ul class="skilllist">
                 <slot></slot>
@@ -85,13 +85,21 @@
 
 <script>
 export default {
-    props: ['title']
+    props: ['title'],
+    computed: {
+        firstLetter() {
+            return this.title.substring(0,1);
+        },
+        otherLetters() {
+            return this.title.substring(1);
+        }
+    }
 }
 </script>
 
 <style scoped>
     .skill {
-        width: 30rem;
+        width: 36.5rem;
         height: 30rem;
         background-color: var(--main-dark-color);
         position: relative;
@@ -112,6 +120,12 @@ export default {
         font-family: var(--main-font);
         font-weight: 400;
         color: var(--light-text);
+        text-transform: uppercase;
+    }
+
+    .title h3 span {
+        color: var(--accent-color);
+        
     }
 
     .skilllist {

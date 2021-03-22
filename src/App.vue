@@ -23,6 +23,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap'); /* font-family: 'Montserrat', sans-serif; */
 :root {
   /* colors */
+  
   --light-text: #f0f0f0;
   --main-light-color: #223e43;
   --main-color: #223e43;
@@ -31,6 +32,14 @@ export default {
   --accent-light-color: #e33452;
   --accent-color: #c3203c;
   --accenr-dark-color: #ad102b;
+  /*--light-text: #f0f0f0;
+  --main-light-color: #343f4a;
+  --main-color: #2C363F;
+  --main-dark-color: #273038;
+  --main-very-dark-color: #222a30;
+  --accent-light-color: #e33452;
+  --accent-color: #c3203c;
+  --accenr-dark-color: #ad102b;*/
   /* fonts */
   --main-font: 'Montserrat', sans-serif; 
   --title-font: 'Fredoka One', cursive;

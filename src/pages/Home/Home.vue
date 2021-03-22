@@ -3,6 +3,7 @@
         <home-head></home-head>
         <home-skills></home-skills>
         <home-projects></home-projects>
+        <home-contact></home-contact>
     </div>
 </template>
 
@@ -10,11 +11,13 @@
 import HomeHead from './components/Head.vue';
 import HomeSkills from './components/skills.vue';
 import HomeProjects from './components/Projects.vue';
+import HomeContact from './components/Contact.vue';
 export default {
     components: {
         HomeHead,
         HomeSkills,
-        HomeProjects
+        HomeProjects,
+        HomeContact
     }
 }
 </script>
