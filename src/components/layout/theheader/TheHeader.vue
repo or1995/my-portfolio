@@ -29,7 +29,6 @@ export default {
     },
     mounted() {
         document.addEventListener('scroll', () => {
-            console.log(window.scrollY);
             const lastKnownScrollPosition = window.scrollY;
 
             if (lastKnownScrollPosition > 200) {

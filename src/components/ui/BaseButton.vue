@@ -1,5 +1,5 @@
 <template>
-    <router-link v-if="link" :class="invert ? 'invertbutton' : 'normalbutton'">
+    <router-link v-if="link" :class="{'normalbutton': !invert , 'invertbutton': invert}" >
         <slot></slot>
     </router-link>
     <button v-else class="normalbutton">
@@ -11,7 +11,8 @@
 export default {
     props: {
         link: Boolean,
-        invert: Boolean
+        invert: Boolean,
+        big: Boolean
     }
 }
 </script>
@@ -21,6 +22,8 @@ export default {
         background-color: var(--accent-color);
         display: flex;
         align-items: center;
+        cursor: pointer;
+        border: none;
         justify-content: center;
         padding:0.7em 1.4em;
         border-radius:2px;
@@ -30,6 +33,7 @@ export default {
         font-family: var(--main-font);
         text-decoration: none;
         color: var(--light-text);
+        outline: none;
         transition: all .3s;
     }
 
@@ -45,6 +49,7 @@ export default {
         justify-content: center;
         padding:0.7em 1.4em;
         border-radius:2px;
+        outline: none;
         text-transform:uppercase;
         box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
         width: fit-content;

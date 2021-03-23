@@ -1347,7 +1347,6 @@
 export default {
     mounted() {
         document.addEventListener('scroll', () => {
-            console.log(window.scrollY);
             const lastKnownScrollPosition = window.scrollY;
 
             if (lastKnownScrollPosition > 0) {
@@ -1364,7 +1363,7 @@ export default {
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 96vh; /* maybe will be 40rem */
+        height: calc(100vh - 2rem); /* maybe will be 40rem */
         background-color: var(--main-dark-color);
         background-size: cover;
         position: relative;
@@ -1490,7 +1489,7 @@ export default {
     }
 
     .divider {
-        width: 5px;
+        width: 3px;
         height: 0rem;
         background-color: var(--accent-color);
         z-index: 1000;
@@ -1513,7 +1512,7 @@ export default {
         color: var(--light-text);
         font-size: 1.3rem;
         line-height: 1.4;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .text div {
