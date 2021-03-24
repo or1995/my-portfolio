@@ -15,6 +15,7 @@
                 <img class="projectimgheader" src="../../../assets/projectspics/socialheader.png"/>
             </projects-project>
         </div>
+        <router-link to="projects" class="morelink">MORE <span>&#10095;&#10095;</span></router-link>
     </div>
 </template>
 
@@ -31,6 +32,10 @@ export default {
     .projects {
         margin-top: 1rem;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
     }
 
     .cards {
@@ -75,5 +80,22 @@ export default {
         transform: translateY(calc(-100% + 18rem));
         transition: transform 8s;
         filter: none;
+    }
+
+    .morelink {
+        align-self: flex-end;
+        text-decoration: none;
+        color: var(--accent-color);
+        font-weight: 500;
+        font-size: 1.2rem;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        font-family: var(--main-font);
+        margin-right: 1rem;
+        transition: all .3s
+    }
+
+    .morelink:hover {
+        color: var(--accent-light-color);
+        transition: all .3s;
     }
 </style>

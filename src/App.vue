@@ -1,7 +1,11 @@
 <template>
   <the-header></the-header>
   <div class="main-container">
-    <router-view></router-view>
+      <router-view v-slot="slotProps">
+        <transition name="route" mode="out-in">
+          <component :is="slotProps.Component"></component>
+        </transition>
+      </router-view>
   </div>
 </template>
 
@@ -10,9 +14,6 @@ import TheHeader from './components/layout/theheader/TheHeader.vue';
 export default {
   components: {
     TheHeader
-  },
-  mounted() {
-    
   }
 }
 </script>
@@ -87,6 +88,27 @@ body {
 .main-container {
   width: calc(100% - 5rem);
   margin-left: 5rem;
+}
+
+.router-link-active h1 {
+  color: var(--light-text) !important;
+}
+
+.route-enter-active {
+  animation: routeani .2s ease-in;
+}
+
+.route-leave-active {
+  animation: routeani .2s ease-in reverse;
+}
+
+@keyframes routeani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 </style>

@@ -7,8 +7,8 @@
             <router-link class="nav-button one" to="/projects">
                 <h1><span>P</span>ROJECTS</h1>
             </router-link>
-            <router-link class="nav-button two" to="/skills">
-                <h1><span>S</span>KILLS</h1>
+            <router-link class="nav-button two" to="/resume">
+                <h1><span>R</span>ESUME</h1>
             </router-link>
             <router-link class="nav-button three" to="/contact">
                 <h1><span>C</span>ONTACT ME</h1>
@@ -71,6 +71,7 @@ header {
 }
 
 .nav-buttons {
+    position: relative;
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
@@ -79,9 +80,20 @@ header {
     width: 100%;
 }
 
+.nav-button::before {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: calc(7.5rem - 4px);
+    left: 0;
+    background-color: var(--accent-color);
+    transition: all .3s;
+}
+
 .nav-button {
     text-decoration: none;
-    margin-bottom: 1rem;
     height: 10rem;
     width: 10rem;
     display: flex;
@@ -89,21 +101,25 @@ header {
     justify-content: center;
     transform: rotate(-90deg);
     transition: all .3;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
 }
 
-.one {
+.one::before {
     animation: buttonshow .3s;
 }
 
-.two {
+.two::before {
     animation: buttonshow .3s .3s;
 }
 
-.three {
+.three::before {
     animation: buttonshow .3s .6s;
 }
 
-.four {
+.four::before {
     animation: buttonshow .3s .9s;
 }
 
@@ -138,9 +154,8 @@ header {
     background-color: var(--accent-color);
 }*/
 
-.nav-button:hover {
-    background-color: var(--accent-color);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.38);
+.nav-button:hover::before{
+    opacity: 1;
     transition: all .3s;
 }
 
@@ -152,16 +167,13 @@ header {
 <style>
 @keyframes buttonshow {
     0% {
-        background-color: transparent;
-        box-shadow: none;
+        opacity: 0;
     }
     50% {
-        background-color: var(--accent-color);
-        box-shadow: 0 2px 4px rgba(0,0,0,0.38);
+        opacity: 1;
     }
     100% {
-        background-color: transparent;
-        box-shadow: none;
+        opacity: 0;
     }
 }
 

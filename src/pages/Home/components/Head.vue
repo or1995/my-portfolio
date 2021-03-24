@@ -31,7 +31,6 @@
                     <p>From choosing colors to writing code, I love every aspect of web development and I want to know as much as I can. I like my work to look good and to be easy to use for the end user.</p>
                     <div>
                         <base-button link to="/projects">My Projects</base-button>
-                        <base-button link to="/contact" invert>Contact Me</base-button>
                     </div>
                 </div>
             </div>
