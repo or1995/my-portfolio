@@ -56,5 +56,6 @@ export default {
         padding-left: .3rem;
         padding-right: .3rem;
         background-color: var(--accent-color);
+        color: var(--main-very-dark-color);
     }
 </style>

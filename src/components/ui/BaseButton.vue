@@ -31,8 +31,9 @@ export default {
         box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
         width: fit-content;
         font-family: var(--main-font);
+        font-weight: 500;
         text-decoration: none;
-        color: var(--light-text);
+        color: var(--dark-text);
         outline: none;
         transition: all .3s;
     }

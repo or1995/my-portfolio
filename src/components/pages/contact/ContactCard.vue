@@ -155,7 +155,6 @@ export default {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-        transform: translateX(100%);
         animation: logomove .5s .3s linear forwards;
 
     }
@@ -216,12 +215,12 @@ export default {
     }
 
     .form-control input {
+        border-radius: 2px;
         width: 35rem;
         height: 3rem;
         margin-bottom: 1rem;
         padding-left: .5rem;
         background-color: var(--main-light-color);
-        border-radius: 2px;
         color: var(--light-text);
         font-size: 1rem;
         border: none;
@@ -276,7 +275,7 @@ export default {
     .form-control h6 {
         font-family: var(--main-font);
         font-size: .8rem;
-        color: #f39c6b;
+        color: var(--alert-color);
         font-weight: 400;
     }
 
@@ -296,7 +295,7 @@ export default {
     }
 
     .error {
-        border: 1px solid #f39c6b !important;
+        border: 1px solid var(--alert-color) !important;
     }
 
     .technology {
@@ -315,19 +314,18 @@ export default {
     #linkedtext {
         fill: var(--main-very-dark-color);
         transition: all .3s;
-        animation: lightformlinkone 5s infinite;
+        animation: lightformlinkone 3s infinite;
     }
 
     #linkedcon {
         fill: var(--main-very-dark-color);
         transition: all .3s;
-        animation: lightformlinktwo 5s infinite;
+        animation: lightformlinktwo 3s infinite;
     }
 
     #linkedlogo {
         fill: var(--main-dark-color);
         transition: all .3s;
-        animation: lightformlinkthree 5s infinite;
     }
 
     .git {
@@ -336,7 +334,7 @@ export default {
         margin-bottom: 2rem;
         fill: var(--main-very-dark-color);
         transition: all .3s;
-        animation: lightformlinkone 5s 1s infinite;
+        animation: lightformlinkone 3s .5s infinite;
 
     }
 
@@ -347,7 +345,7 @@ export default {
         fill: var(--main-very-dark-color);
         margin-right: .7rem;
         transition: all .3s;
-        animation: lightformlinktwo 5s 1s infinite;
+        animation: lightformlinktwo 3s .5s infinite;
     }
 
     .linked {
@@ -380,7 +378,7 @@ export default {
     }
 
     .linkeda:hover #linkedlogo {
-        fill: var(--light-text);
+        fill: var(--main-dark-color);
         animation: none;
         transition: all .3s;
     }
@@ -388,7 +386,7 @@ export default {
 </style>
 
 <style>
-    /*@keyframes lightformlinkone {
+    @keyframes lightformlinkone {
         0% {
             fill: var(--main-very-dark-color);
         }
@@ -423,22 +421,4 @@ export default {
             fill: var(--main-very-dark-color);
         }
     }
-
-    @keyframes lightformlinkthree {
-        0% {
-            fill: var(--main-dark-color);
-        }
-        10% {
-            fill: var(--light-text);
-        }
-        20% {
-            fill: var(--light-text);
-        }
-        30% {
-            fill: var(--main-dark-color);
-        }
-        100% {
-            fill: var(--main-dark-color);
-        }
-    }*/
 </style>
