@@ -1,8 +1,17 @@
 <template>
     <div class="contact">
-        CONTACT ME CONTACT ME CONTACT ME
+        <contact-form></contact-form>
     </div>
 </template>
+
+<script>
+import ContactForm from '../../components/pages/contact/ContactCard';
+export default {
+    components: {
+        ContactForm
+    }
+}
+</script>
 
 <style scoped>
     .contact {

@@ -20,12 +20,13 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap'); /* font-family: 'Fascinate', cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap'); /* font-family: 'Cinzel', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap'); /* font-family: 'Holtwood One SC', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap'); /* font-family: 'Montserrat', sans-serif; */
 :root {
   /* colors */
   
   --light-text: #f0f0f0;
+  --grey-text: #e0e0e0;
   --dark-text: #12100E;
   --main-light-color: #313550;
   --main-color: #2C2F47;
@@ -33,6 +34,7 @@ export default {
   --main-very-dark-color: #171A26;
   --accent-light-color: #F5C684;
   --accent-color: #F5AF4E;
+  --accent-dark-color: #D49844;
   --alert-color: #d72638;
   /*
   --light-text: #f0f0f0;
@@ -47,7 +49,7 @@ export default {
   */
   /* fonts */
   --main-font: 'Montserrat', sans-serif; 
-  --title-font: 'Cinzel', serif;
+  --title-font: 'Montserrat', sans-serif; 
 }
 * {
   margin: 0;
@@ -60,12 +62,12 @@ body {
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: #fff;
+  color: var(--main-dark-color);
   background: var(--accent-color);
 }
 
 ::selection {
-  color: #fff;
+  color: var(--main-dark-color);
   background: var(--accent-color);
 }
 
@@ -99,19 +101,30 @@ body {
 }
 
 .route-enter-active {
-  animation: routeani .2s ease-in;
+  animation: routeaniin .2s ease-in;
 }
 
 .route-leave-active {
-  animation: routeani .2s ease-in reverse;
+  animation: routeaniout .2s ease-in;
 }
 
-@keyframes routeani {
+@keyframes routeaniin {
   0% {
+    transform: translateY(2rem);
     opacity: 0;
   }
   100% {
+    transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes routeaniout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

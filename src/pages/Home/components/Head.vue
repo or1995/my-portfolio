@@ -6,8 +6,8 @@
                     <svg  viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg" overflow="visible">
                         <defs>
                             <filter id="f1" x="0" y="0" width="200%" height="200%">
-                            <feOffset result="offOut" in="SourceAlpha" dx="0" dy="4" />
-                            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="5" />
+                            <feOffset result="offOut" in="SourceAlpha" dx="0" dy="1" />
+                            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="4" />
                             <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
                             </filter>
                         </defs>
@@ -34,7 +34,7 @@
             <div class="divider" ref="divide"></div>
             <div class="text-wrapper">
                 <div class="text">
-                    <h1>My Name is Omar Ali</h1>
+                    <h1>My Name is <span>Omar Ali</span></h1>
                     <p>From choosing colors to writing code, I love every aspect of web development and I want to know as much as I can. I like my work to look good and to be easy to use for the end user.</p>
                     <div>
                         <base-button link to="/projects">My Projects</base-button>
@@ -53,12 +53,18 @@
 //import anime from 'animejs/lib/anime.es.js';
 export default {
     mounted() {
-        document.addEventListener('scroll', () => {
+        document.addEventListener('scroll', this.mousewheel);
+    },
+    beforeUnmount() {
+       document.removeEventListener('scroll', this.mousewheel);
+    },
+    methods: {
+        mousewheel() {
             const lastKnownScrollPosition = window.scrollY;
             if (lastKnownScrollPosition > 0) {
                 this.$refs.mousewheel.style.opacity = "0";
             } 
-        });
+        }
     }
 }
 </script>
@@ -70,7 +76,7 @@ export default {
         justify-content: center;
         width: 100%;
         height: calc(100vh - 2rem); /* maybe will be 40rem */
-        background:  linear-gradient(86deg, rgba(26,29,43,0.97) 0%, rgba(26,29,43,0.97) 100%), url("../../../assets/back/back1.jpg") no-repeat center center;
+        background:  linear-gradient(86deg, rgba(26,29,43,0.98) 0%, rgba(26,29,43,0.98) 100%), url("../../../assets/back/back1.jpg") no-repeat center center;
         position: relative;
        /* border: solid 5px var(--accent-color);*/ /* considering removing */
         overflow: hidden;
@@ -90,7 +96,7 @@ export default {
         animation: logomove .5s .3s linear forwards;
     }
     .logo svg {
-        height: 12rem;
+        height: 14rem;
         fill: #fff;
         padding: 1rem;
         margin-right: -2rem;
@@ -143,21 +149,27 @@ export default {
         animation: dividerani .3s linear forwards;
     }
     .text h1 {
-        font-family: var(--main-font);
+        font-family: var(--title-font);
+        font-size: 2.8rem;
         text-transform: uppercase;
-        font-size: 2.3rem;
-        font-weight: 500;
-        color: var(--accent-color);
-        margin-bottom: .7rem;
+        font-weight: 400;
+        color: var(--light-text);
+        margin-bottom: .8rem;
         margin-top: -1rem;
         text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     }
+
+    .text h1 span {
+        color: var(--accent-color);
+        font-weight: 500;
+    }
+
     .text p {
         font-family: var(--main-font);
         font-weight: 300;
-        color: var(--light-text);
+        color: var(--grey-text);
         font-size: 1.3rem;
-        line-height: 1.4;
+        line-height: 1.3;
         margin-bottom: 2rem;
     }
     .text div {
@@ -203,12 +215,12 @@ export default {
             margin-right: -2rem;
         }
         75% {
-            height: 11rem;
+            height: 13rem;
             opacity: 0;
             margin-right: -3.2rem;
         }
         100% {
-            height: 11rem;
+            height: 13rem;
             opacity: 1;
             margin-right: -3.2rem;
         }

@@ -1,10 +1,10 @@
 <template>
     <base-card scrollan="fade-up">
-        <div class="project">
-            <div class="prism"></div>
+        <div class="project" :style="bordered ? 'border: 5px solid var(--accent-color)' : null">
+            <div class="prism" v-if="prism"></div>
             <slot>
             </slot>
-            <div class="title">
+            <div class="title" v-if="!hidetitle">
                 <h3>{{title}}</h3>
             </div>
             <div class="overlay"></div>
@@ -14,7 +14,12 @@
 
 <script>
 export default {
-    props: ['title']
+    props: {
+        title: String,
+        prism: Boolean,
+        hidetitle: Boolean,
+        bordered: Boolean
+    }
 }
 </script>
 
@@ -38,7 +43,7 @@ export default {
         height: 150%;
         width: 12rem;
         transform: rotate(20deg);
-        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 30%, rgba(255,255,255,0.05) 70%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.1) 70%, rgba(255,255,255,0) 100%);
         animation: prismani 2s infinite;
         z-index: 100000;
     }

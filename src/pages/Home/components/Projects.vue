@@ -2,17 +2,17 @@
     <div class="projects">
         <section-title text="projects"></section-title>
         <div class="cards">
-            <projects-project title="ECommerce">
-                <img class="projectimg" src="../../../assets/projectspics/ecommerce2.png"/>
-                <img class="projectimgheader" src="../../../assets/projectspics/ecommerce2header.png"/>
+            <projects-project title="ECommerce" prism>
+                <img class="projectimg" src="../../../assets/projectspics/ecommerce2.jpg" alt="Ecommerce"/>
+                <img class="projectimgheader" src="../../../assets/projectspics/ecommerce2header.jpg" alt="Ecommerce"/>
             </projects-project>
-            <projects-project title="Hello Blog">
-                <img class="projectimg" src="../../../assets/projectspics/hello.png"/>
-                <img class="projectimgheader height" src="../../../assets/projectspics/helloheader.png"/>
+            <projects-project title="Hello Blog" prism>
+                <img class="projectimg" src="../../../assets/projectspics/hello.jpg" alt="Hello Blog"/>
+                <img class="projectimgheader height" src="../../../assets/projectspics/helloheader.jpg" alt="Hello Blog"/>
             </projects-project>
-            <projects-project title="Social Media App">
-                <img class="projectimg" src="../../../assets/projectspics/social.png"/>
-                <img class="projectimgheader" src="../../../assets/projectspics/socialheader.png"/>
+            <projects-project title="Social Media App" prism>
+                <img class="projectimg" src="../../../assets/projectspics/social.jpg" alt="Social Media App"/>
+                <img class="projectimgheader" src="../../../assets/projectspics/socialheader.jpg" alt="Social Media App"/>
             </projects-project>
         </div>
         <router-link to="projects" class="morelink">MORE <span>&#10095;&#10095;</span></router-link>
