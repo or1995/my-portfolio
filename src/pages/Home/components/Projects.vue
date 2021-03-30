@@ -2,17 +2,9 @@
     <div class="projects">
         <section-title text="projects"></section-title>
         <div class="cards">
-            <projects-project title="ECommerce" prism>
-                <img class="projectimg" src="../../../assets/projectspics/ecommerce2.jpg" alt="Ecommerce"/>
-                <img class="projectimgheader" src="../../../assets/projectspics/ecommerce2header.jpg" alt="Ecommerce"/>
-            </projects-project>
-            <projects-project title="Hello Blog" prism>
-                <img class="projectimg" src="../../../assets/projectspics/hello.jpg" alt="Hello Blog"/>
-                <img class="projectimgheader height" src="../../../assets/projectspics/helloheader.jpg" alt="Hello Blog"/>
-            </projects-project>
-            <projects-project title="Social Media App" prism>
-                <img class="projectimg" src="../../../assets/projectspics/social.jpg" alt="Social Media App"/>
-                <img class="projectimgheader" src="../../../assets/projectspics/socialheader.jpg" alt="Social Media App"/>
+            <projects-project v-for="project in homeProjects" :key="project.name" :title="project.name" hidetitle prism class="left">
+                <img class="projectimg" :src="require('../../../assets/projectspics/' + project.projectImage + '.jpg')" :alt="project.name"/>
+                <img class="projectimgheader" :class="project.height ? 'height' : null" :src="require('../../../assets/projectspics/' + project.projectHeaderImage + '.jpg')" :alt="project.name"/>
             </projects-project>
         </div>
         <router-link to="projects" class="morelink">MORE <span>&#10095;&#10095;</span></router-link>
@@ -24,6 +16,11 @@ import ProjectsProject from '../../../components/pages/projects/Project.vue';
 export default {
     components: {
         ProjectsProject
+    },
+    computed: {
+        homeProjects() {
+            return this.$store.getters.homeProjects;
+        }
     }
 }
 </script>
