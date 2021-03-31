@@ -3,7 +3,7 @@
         <!--<projects-carousel></projects-carousel>-->
         <base-card>
             <div class="featured">
-                <div class="fcards">
+                <!--<div class="fcards">
                     <projects-project :title="homeProjects[0].name" hidetitle prism class="left">
                         <img class="projectimg" :src="require('../../assets/projectspics/' + homeProjects[1].projectImage + '.jpg')" :alt="homeProjects[1].name"/>
                         <img class="projectimgheader height" :src="require('../../assets/projectspics/' + homeProjects[1].projectHeaderImage + '.jpg')" :alt="homeProjects[1].name"/>
@@ -16,8 +16,8 @@
                         <img class="projectimg" :src="require('../../assets/projectspics/' + homeProjects[2].projectImage + '.jpg')" :alt="homeProjects[2].name"/>
                         <img class="projectimgheader" :src="require('../../assets/projectspics/' + homeProjects[2].projectHeaderImage + '.jpg')" :alt="homeProjects[2].name"/>
                     </projects-project>
-                </div>
-                <h1>Original <span>Projects</span></h1>
+                </div>-->
+                <h1>ORIGINAL <span>PROJECTS</span></h1>
                 <p>I built all the projects in this portfolio from scratch, I didn't include any course projects.</p>
                 <div class="log">
                     <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,22 +74,21 @@ export default {
     .projects {
         width: 100%;
         padding: 1rem;
-    }
-
-    .projects div {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .featured {
         background-color: var(--main-dark-color);
-        background: linear-gradient(124deg, rgba(23,26,38,1) 0%, rgba(26,29,43,1) 100%);
-        width: 100%;
-        height: 40rem;
+        background: var(--gradient);
+        width: 112rem;
+        height: 30rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-bottom: 5rem;
         position: relative;
     }
 
@@ -98,7 +97,7 @@ export default {
         color: var(--light-text);
         font-weight: 500;
         font-size: 3rem;
-        margin-bottom: .7rem;
+        margin-bottom: 1rem;
         z-index: 10000;
     }
 
@@ -106,7 +105,7 @@ export default {
         font-family: var(--main-font);
         color: var(--light-text);
         font-weight: 400;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         z-index: 10000;
     }
 
@@ -124,15 +123,13 @@ export default {
         z-index: 10000;
     }
 
-    .fcards div {
-        width: 32.8%;
-    }
-
     .allcards {
-        width: 100%;
+        width: 112rem;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2rem;
+        align-content: center;
+        justify-content: center;
+        grid-template-columns: 36.7rem 36.7rem 36.7rem;
+        gap: 1rem;
         grid-auto-rows: auto;
     }
 
@@ -169,22 +166,22 @@ export default {
     }
 
     .left {
-        transform: translateX(2rem) !important;
+        transform: translateX(10rem) scale(.7) !important;
     }
 
     .middle {
-        transform: scale(1.2) !important;
+        transform: scale(.8) !important;
         z-index: 1000;
     }
 
     .right {
-        transform: translateX(-2rem) !important;
+        transform: translateX(-10rem) scale(.7) !important;
     }
 
     .log {
         position: absolute;
-        bottom: -5%;
-        right: -30%;
+        bottom: -4rem;
+        right: -30rem;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;

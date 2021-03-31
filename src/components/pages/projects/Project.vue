@@ -25,8 +25,8 @@ export default {
 
 <style scoped>
     .project {
-        width: 100%;
-        height: 18rem;
+        width: 36.7rem;
+        height: 19rem;
         background-color: var(--main-dark-color);
         position: relative;
         overflow: hidden;

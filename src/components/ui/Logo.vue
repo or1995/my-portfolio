@@ -41,12 +41,14 @@ export default {
  svg {
      fill: var(--main-light-color);
      height: 3rem;
+     animation: showlogo 1s;
  }
 
  .o {
      fill: var(--main-light-color);
      height: 2.6rem;
      margin-right: -.3rem;
+     animation: showlogoo 1s !important;
  }
 
  .logo:hover svg {
@@ -71,4 +73,30 @@ export default {
  }
 
 
+</style>
+
+<style>
+@keyframes showlogo {
+    0% {
+        fill: var(--main-light-color);
+    }
+    50% {
+        fill: var(--light-text);
+    }
+    100% {
+        fill: var(--main-light-color);
+    }
+}
+
+@keyframes showlogoo {
+    0% {
+        fill: var(--main-light-color);
+    }
+    50% {
+        fill: var(--accent-color);
+    }
+    100% {
+        fill: var(--main-light-color);
+    }
+}
 </style>

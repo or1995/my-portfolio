@@ -107,36 +107,20 @@ header {
     user-select: none;
 }
 
-.one::before {
-    animation: buttonshow .3s;
-}
-
-.two::before {
-    animation: buttonshow .3s .3s;
-}
-
-.three::before {
-    animation: buttonshow .3s .6s;
-}
-
-.four::before {
-    animation: buttonshow .3s .9s;
-}
-
 .one h1 {
-    animation: buttonshowtext .3s;
+    animation: buttonshowtext 1s;
 }
 
 .two h1 {
-    animation: buttonshowtext .3s .3s;
+    animation: buttonshowtext 1s;
 }
 
 .three h1 {
-    animation: buttonshowtext .3s .6s;
+    animation: buttonshowtext 1s;
 }
 
 .four h1 {
-    animation: buttonshowtext .3s .9s;
+    animation: buttonshowtext 1s;
 }
 
 .nav-button h1 {
@@ -165,18 +149,6 @@ header {
 </style>
 
 <style>
-@keyframes buttonshow {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 @keyframes buttonshowtext {
     0% {
         color: var(--main-light-color);

@@ -132,7 +132,7 @@
                                     <div class="item-logo logolist">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/></svg>
                                     </div>
-                                    <div class="item-content">NodeJs, ExpressJs.(In the process of learning)</div>
+                                    <div class="item-content" style="text-decoration: line-through">NodeJs, ExpressJs.</div>
                                 </div>
                                 <div class="list-itemandlogo">
                                     <div class="item-logo logolist">
@@ -159,16 +159,20 @@
         width: 100%;
         padding: 1rem;
         font-family: var(--main-font);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .cv-header {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 112rem;
         position: relative;
         background-color: var(--main-dark-color);
-        background: linear-gradient(124deg, rgba(23,26,38,1) 0%, rgba(26,29,43,1) 100%);
+        background: var(--gradient);
     }
 
     .bottom {
@@ -219,11 +223,12 @@
         text-transform: uppercase;
         font-size: 1.2rem;
         margin-right: .4rem;
-        font-weight: 300;
+        font-weight: 400;
     }
 
     .content {
         padding: 1rem 0rem;
+        width: 112rem;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
@@ -254,9 +259,9 @@
 
     .sidesection {
         background-color: var(--main-dark-color);
+        background: var(--gradient);
         display: flex;
-        padding: 4rem 2rem;
-        padding-top: 2.5rem;
+        padding: 2.5rem 2rem;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -370,10 +375,10 @@
         align-items: flex-start;
         justify-content: flex-start;
         font-family: inherit;
-        padding: 4rem 2rem;
-        padding-top: 2.5rem;
+        padding: 2.5rem 2rem;
         width: 100%;
         background-color: var(--main-dark-color);
+        background: var(--gradient);
     }
 
     .cvlogo {

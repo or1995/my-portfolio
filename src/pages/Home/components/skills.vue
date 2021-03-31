@@ -35,7 +35,7 @@ export default {
 <style scoped>
     .skills {
         margin-top: 1rem;
-        width: 100%;
+        width: 112rem;
     }
 
     .skillscards {

@@ -26,13 +26,13 @@ export default {
 
 <style scoped>
     .title {
-        width: 100%;
+        width: 112rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: 2rem;
-        margin-top: 1rem;
+        padding: 2rem .4rem;
+        margin-top: 2rem;
     }
 
     .title div {

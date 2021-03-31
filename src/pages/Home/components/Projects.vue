@@ -28,7 +28,7 @@ export default {
 <style scoped>
     .projects {
         margin-top: 1rem;
-        width: 100%;
+        width: 112rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -39,12 +39,9 @@ export default {
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 1rem;
         margin-bottom: 1rem;
-    }
-
-    .cards div {
-        width: 32.8%;
     }
 
     .projectimgheader {

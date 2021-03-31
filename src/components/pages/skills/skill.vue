@@ -102,6 +102,7 @@ export default {
         width: 36.5rem;
         height: 30rem;
         background-color: var(--main-dark-color);
+        background: var(--gradient);
         position: relative;
         overflow: hidden;
         padding-top: 1rem;

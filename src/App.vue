@@ -36,6 +36,9 @@ export default {
   --accent-color: #F5AF4E;
   --accent-dark-color: #D49844;
   --alert-color: #d72638;
+
+  /* gradient */
+  --gradient: linear-gradient(124deg, rgba(23,26,38,1) 0%, rgba(26,29,43,1) 100%);
   /*
   --light-text: #f0f0f0;
   --grey-text: #ebebeb;
@@ -101,7 +104,7 @@ body {
 }
 
 .route-enter-active {
-  animation: routeaniin .2s ease-in;
+  animation: routeaniin .3s ease-in;
 }
 
 .route-leave-active {
@@ -110,8 +113,11 @@ body {
 
 @keyframes routeaniin {
   0% {
-    transform: translateY(2rem);
+    transform: translateY(-3rem);
     opacity: 0;
+  }
+  50% {
+    
   }
   100% {
     transform: translateY(0);
@@ -128,4 +134,15 @@ body {
   }
 }
 
+@media only screen and (min-width: 2560px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 3840px) {
+  html {
+    font-size: 25px;
+  }
+}
 </style>

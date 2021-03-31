@@ -45,6 +45,27 @@
                 <div>
                 </div>
             </div>
+            <div class="overlaylogo">
+                <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path ref="leftarrow" d="M169.6 0H109.8L0 101.5L109.8 203H169.6L64.5 101.5L169.6 0Z"/>
+                </svg>
+                <svg viewBox="0 0 149 184" class="overlayo" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M0 0H148.9V183.3H0V0ZM45.8 137.5H103.1V45.8H45.8V137.5Z" />
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="148.9" height="183.3" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <svg viewBox="0 0 117 204" fill="none" class="slash" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M54.3 204L117 0H62.7L0 204H54.3Z" />
+                </svg>
+                <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
+                </svg>
+            </div>
         </div>
     </base-card>
 </template>
@@ -76,7 +97,8 @@ export default {
         justify-content: center;
         width: 100%;
         height: calc(100vh - 2rem); /* maybe will be 40rem */
-        background:  linear-gradient(86deg, rgba(26,29,43,0.98) 0%, rgba(26,29,43,0.98) 100%), url("../../../assets/back/back1.jpg") no-repeat center center;
+        background:  linear-gradient(124deg, rgba(23,26,38,.98) 0%, rgba(26,29,43,.98) 100%), url("../../../assets/back/back1.jpg") no-repeat center center;
+        background-size: cover;
         position: relative;
        /* border: solid 5px var(--accent-color);*/ /* considering removing */
         overflow: hidden;
@@ -92,7 +114,7 @@ export default {
         align-items: flex-end;
         justify-content: flex-end;
         z-index: 1000;
-        transform: translateX(100%);
+        margin-right: 2rem;
         animation: logomove .5s .3s linear forwards;
     }
     .logo svg {
@@ -138,15 +160,13 @@ export default {
         z-index: 1000;
         width: 40rem;
         height: 15rem;
-        transform: translateX(-100%);
-        animation: textmove .5s .3s linear forwards;
+        margin-left: 2rem;
     }
     .divider {
         width: 3px;
-        height: 0rem;
+        height: 15rem;
         background-color: var(--accent-color);
         z-index: 1000;
-        animation: dividerani .3s linear forwards;
     }
     .text h1 {
         font-family: var(--title-font);
@@ -157,6 +177,8 @@ export default {
         margin-bottom: .8rem;
         margin-top: -1rem;
         text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        opacity: 0;
+        animation: textani .5s .3s linear forwards;
     }
 
     .text h1 span {
@@ -171,10 +193,14 @@ export default {
         font-size: 1.3rem;
         line-height: 1.3;
         margin-bottom: 2rem;
+        opacity: 0;
+        animation: textani .5s .5s linear forwards;
     }
     .text div {
         width: 100%;
         display: flex;
+        opacity: 0;
+        animation: textani .5s .7s linear forwards;
     }
     .text div a {
         margin-right: .5rem;
@@ -199,6 +225,27 @@ export default {
         background-color: var(--accent-color);
         border-radius: 8px;
         animation: mousewheelani 1s infinite;
+    }
+
+    .overlaylogo {
+        opacity: .4;
+        position: absolute;
+        bottom: -20rem;
+        left: -40rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        z-index: 1;
+    }
+
+    .overlaylogo svg {
+        height: 50rem;
+        fill: var(--main-very-dark-color);
+        transition: all .3s;
+    }
+
+    .overlayo {
+        height: 46rem !important;
     }
 </style>
 
@@ -226,7 +273,7 @@ export default {
         }
     }
     
-    @keyframes logomove {
+    /*@keyframes logomove {
         0% {
             transform: translateX(100%);
         }
@@ -234,22 +281,13 @@ export default {
             transform: translateX(0);
             margin-right: 2rem;
         }
-    }
-    @keyframes dividerani {
+    }*/
+    @keyframes textani {
         0% {
-            height: 0rem;
+            opacity: 0;
         }
         100% {
-            height: 15rem;
-        }
-    }
-    @keyframes textmove {
-        0% {
-            transform: translateX(-100%);
-        }
-        100% {
-            transform: translateX(0);
-            margin-left: 2rem;
+            opacity: 1;
         }
     }
     @keyframes mousewheelani {
