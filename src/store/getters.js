@@ -4,5 +4,8 @@ export default {
     },
     homeProjects(state) {
         return state.projects.filter(project => project.home);
+    },
+    currentProject(state) {
+        return state.currentProject;
     }
 }

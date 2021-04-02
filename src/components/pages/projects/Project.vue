@@ -1,6 +1,6 @@
 <template>
     <base-card scrollan="fade-up">
-        <div class="project" :style="bordered ? 'border: 5px solid var(--accent-color)' : null">
+        <router-link :to="link" class="project" :style="bordered ? 'border: 5px solid var(--accent-color)' : null">
             <div class="prism" v-if="prism"></div>
             <slot>
             </slot>
@@ -8,7 +8,7 @@
                 <h3>{{title}}</h3>
             </div>
             <div class="overlay"></div>
-        </div>
+        </router-link>
     </base-card>
 </template>
 
@@ -19,6 +19,11 @@ export default {
         prism: Boolean,
         hidetitle: Boolean,
         bordered: Boolean
+    },
+    computed: {
+        link() {
+            return '/projects/' + this.title.toLowerCase().replaceAll(' ', '');
+        }
     }
 }
 </script>

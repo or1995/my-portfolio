@@ -53,7 +53,8 @@ export default createStore({
                     height: false
                 }
 
-            ]
+            ],
+            currentProject: null
         }
     },
     getters,

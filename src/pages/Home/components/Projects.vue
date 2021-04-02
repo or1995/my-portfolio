@@ -71,7 +71,7 @@ export default {
 
 
     .projectimg:hover {
-        transform: translateY(calc(-100% + 18rem));
+        transform: translateY(calc(-100% + 19rem));
         transition: transform 8s;
         filter: none;
     }

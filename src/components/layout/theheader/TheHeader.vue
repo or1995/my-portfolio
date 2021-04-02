@@ -4,7 +4,7 @@
             <o-logo :size="notTop ? 'small' : 'medium'"></o-logo>
         </div>
         <div class="nav-buttons">
-            <router-link class="nav-button one" to="/projects">
+            <router-link class="nav-button one" :class="{'router-link-active':$route.fullPath.includes('projects'), 'router-link-exact-active':$route.fullPath.includes('projects')}" to="/projects">
                 <h1><span>P</span>ROJECTS</h1>
             </router-link>
             <router-link class="nav-button two" to="/resume">
