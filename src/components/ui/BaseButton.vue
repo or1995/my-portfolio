@@ -1,8 +1,8 @@
 <template>
-    <router-link v-if="link" :class="{'normalbutton': !invert , 'invertbutton': invert}" >
+    <router-link v-if="link" class="normalbutton" :class="{'invertbutton': invert}" >
         <slot></slot>
     </router-link>
-    <button v-else class="normalbutton">
+    <button v-else class="normalbutton" :class="{'invertbutton': invert}">
         <slot></slot>
     </button>    
 </template>
@@ -25,15 +25,16 @@ export default {
         cursor: pointer;
         border: none;
         justify-content: center;
-        padding:0.7em 1.4em;
+        padding:0.7rem 1.5rem;
         border-radius:2px;
-        text-transform:uppercase;
-        width: fit-content;
+        text-transform: capitalize;
+        font-size: 1.1rem;
         font-family: var(--main-font);
         font-weight: 500;
         text-decoration: none;
         color: var(--dark-text);
         outline: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.38);
         transition: all .3s;
     }
 
@@ -43,20 +44,8 @@ export default {
     }
 
     .invertbutton {
-        background-color: var(--light-text);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding:0.7em 1.4em;
-        border-radius:2px;
-        outline: none;
-        text-transform:uppercase;
-        box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
-        width: fit-content;
-        font-family: var(--main-font);
-        text-decoration: none;
-        color: var(--accent-color);
-        transition: all .3s;
+        background-color: var(--accent-color);
+        color: var(--dark-text);
     }
 
     .invertbutton:hover {

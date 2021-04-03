@@ -32,7 +32,7 @@ export default {
   --main-color: #2C2F47;
   --main-dark-color: #1A1D2B;
   --main-very-dark-color: #171A26;
-  --accent-light-color: #F5C684;
+  --accent-light-color: #F5BD6E;
   --accent-color: #F5AF4E;
   --accent-dark-color: #D49844;
   --alert-color: #d72638;
@@ -87,6 +87,7 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--main-very-dark-color);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.38);
 }
 
 /* Handle on hover */

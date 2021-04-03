@@ -7,78 +7,6 @@
             <ul class="skilllist">
                 <slot></slot>
             </ul>
-            <div class="arrowsone">
-                <div class="arrowsup">
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                </div>
-                <div class="arrowsdown">
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="arrowstwo">
-                 <div class="arrowsup">
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                </div>
-                <div class="arrowsdown">
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                    <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
-                    </svg>
-                </div>
-            </div>
         </div>
     </base-card>
 </template>
@@ -110,7 +38,7 @@ export default {
 
     .title {
         width: 100%;
-        height: 10rem;
+        height: 8rem;
         display: flex;
         align-items: center;
         justify-content: center;
