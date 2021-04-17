@@ -37,7 +37,8 @@ export default {
 
     .cards {
         width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
         justify-content: center;
         gap: 1rem;
@@ -55,8 +56,7 @@ export default {
     }
 
     .height {
-        height: 100%;
-        width: auto;
+        width: 20%;
     }
 
     .projectimg {
@@ -91,5 +91,24 @@ export default {
     .morelink:hover {
         color: var(--accent-light-color);
         transition: all .3s;
+    }
+
+    @media only screen and (max-width: 1919px) {
+        .projects {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 1140px) {
+        .cards {
+            grid-template-columns: 1fr 1fr 0px;
+        }
+    }
+
+    @media only screen and (max-width: 750px) {
+        .cards {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
     }
 </style>

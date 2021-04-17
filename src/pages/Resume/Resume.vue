@@ -126,7 +126,7 @@
                                     <div class="item-logo logolist">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/></svg>
                                     </div>
-                                    <div class="item-content">Python Django, Django Rest API.</div>
+                                    <div class="item-content">Python Django, Django Rest Framework.</div>
                                 </div>
                                 <div class="list-itemandlogo">
                                     <div class="item-logo logolist">
@@ -173,6 +173,7 @@
         position: relative;
         background-color: var(--main-dark-color);
         background: var(--gradient);
+        border-radius: 5px;
     }
 
     .bottom {
@@ -401,40 +402,43 @@
         height: 28rem !important;
     }
 
+    @media only screen and (max-width: 1919px) {
+        .cv-header {
+            width: 100%;
+        }
+
+        .content {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
     @media only screen and (max-width: 1200px) {
-        body {
-            height: auto;
-        }
-
-        .namepanel {
-            width: 40rem;
-        }
-
         .name {
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
     }
 
     @media only screen and (max-width: 960px) {
-        .circle {
-            display: none;
-        }
-
         .namepanel {
             width: 100%;
-            margin-bottom: 2rem;
             align-items: center;
             justify-content: center;
             padding-left: 0;
         }
 
         .content {
-            padding: 1rem 1rem;
             flex-direction: column;
         }
 
         .content-small {
             flex-direction: row;
+        }
+        
+        .vcvsplitter {
+            width: 0rem;
+            height: 1rem;
         }
 
         .sidepanel {
@@ -450,9 +454,74 @@
         }
     }
 
+    @media only screen and (max-width: 800px) {
+        .name {
+            font-size: 2.5rem;
+        }
+    }
+
     @media only screen and (max-width: 750px) {
-        html {
-            font-size: 12px;
+            .title h4 {
+                font-family: inherit;
+                color: var(--light-text);
+                text-transform: uppercase;
+                font-size: 1rem;
+                margin-right: .4rem;
+                font-weight: 400;
+            }
+    }
+
+    @media only screen and (max-width: 580px) {
+        .name {
+            font-size: 2rem;
+        }
+
+        .title h4 {
+            font-family: inherit;
+            color: var(--light-text);
+            text-transform: uppercase;
+            font-size: .8rem;
+            margin-right: .4rem;
+            font-weight: 400;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+        }
+
+        .section-content p {
+            font-family: inherit;
+            font-size: 1.2rem;
+            line-height: 1.3;
+            font-weight: 400;
+            color: var(--grey-text);
+        }
+
+        .item-content {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media only screen and (max-width: 470px) {
+        .name {
+            font-size: 1.8rem;
+        }
+
+        .title h4 {
+            font-family: inherit;
+            color: var(--light-text);
+            text-transform: uppercase;
+            font-size: .7rem;
+            margin-right: .4rem;
+            font-weight: 400;
+        }
+
+        .section-title h2 {
+            font-size: 1.6rem;
+        }
+
+        .item-content {
+            font-size: 1.2rem;
         }
     }
 </style>

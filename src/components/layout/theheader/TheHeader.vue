@@ -1,4 +1,30 @@
 <template>
+    <teleport to="body">
+        <div class="smallheader">
+            <button class="menubutton" :class="{'menubuttonshawn': mmenu}" @click="() => {mmenu = !mmenu}">
+                <div :class="{'btop': mmenu}"></div>
+                <div :class="{'bmid': mmenu}"></div>
+                <div :class="{'bbottom': mmenu}"></div>
+            </button>
+            <div class="menu" :class="{'menushawn': mmenu}" @click="() => {mmenu = !mmenu}">
+                <router-link class="smallnav-button"  to="/">
+                    <h1>HOME</h1>
+                </router-link>
+                <router-link class="smallnav-button" :class="{'router-link-active':$route.fullPath.includes('projects'), 'router-link-exact-active':$route.fullPath.includes('projects')}" to="/projects">
+                    <h1>PROJECTS</h1>
+                </router-link>
+                <router-link class="smallnav-button" to="/resume">
+                    <h1>RESUME</h1>
+                </router-link>
+                <router-link class="smallnav-button" to="/contact">
+                    <h1>CONTACT ME</h1>
+                </router-link>
+                <router-link class="smallnav-button" to="/about">
+                    <h1>ABOUT ME</h1>
+                </router-link>
+            </div>
+        </div>
+    </teleport>
     <header>
         <div class="logodiv" :class="{logorotate: notTop}">
             <o-logo :size="notTop ? 'small' : 'medium'"></o-logo>
@@ -24,7 +50,8 @@
 export default {
     data() {
         return {
-            notTop: false
+            notTop: false,
+            mmenu: false
         }
     },
     mounted() {
@@ -138,6 +165,10 @@ header {
     background-color: var(--accent-color);
 }*/
 
+.smallheader {
+    z-index: 100000000;
+}
+
 .nav-button:hover::before{
     opacity: 1;
     transition: all .3s;
@@ -145,6 +176,135 @@ header {
 
 .nav-button:hover h1 {
     color: var(--light-text);
+}
+
+.menubutton {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem; 
+    background-color: var(--accent-color);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.38);
+    z-index: 100000000;
+    outline: none;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.menubuttonshawn {
+    background-color: transparent;
+    box-shadow: none;
+    transition: all .3s;
+}
+
+.menubutton div {
+    height: 4px;
+    width: 30px;
+    background-color: var(--main-dark-color);
+    border-radius: 2px;
+    transition: all .3s;
+}
+
+.menu {
+    pointer-events: none;
+    transform: translateY(-100%);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 10000000;
+    height: 100vh;
+    background-color: var(--accent-color);
+    background: linear-gradient(310deg, rgba(245,189,110,1) 0%, rgba(245,175,78,1) 100%);
+    transition: all .5s;
+}
+
+.menushawn {
+    pointer-events: all;
+    transform: translateY(0);
+    transition: all .5s;
+}
+
+.smallnav-button {
+    text-decoration: none;
+    color: var(--main-color);
+    font-family: var(--main-font);
+}
+
+.smallnav-button:focus,
+.smallnav-button:active,
+.smallnav-button:hover {
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+
+
+.btop {
+    transform-origin: 0px 0px;
+    transition: all .3s;
+}
+
+.bbottom {
+    transform-origin: 0px 0px;
+    transition: all .3s;
+}
+
+.bmid {
+    transform: translateX(8px);
+    transition: all .3s;
+}
+
+@media only screen and (max-width: 1919px) { 
+    header {
+        overflow-y: auto;
+        width: 4.5rem;
+    }
+
+    .nav-buttons {
+        position: relative;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .nav-button {
+        height: 7.5rem;
+        width: 10rem;
+    }
+
+    .nav-button h1 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    header {
+        display: none;
+    }
+
+    .menubutton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
 }
 </style>
 

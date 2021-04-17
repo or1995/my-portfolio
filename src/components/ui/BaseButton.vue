@@ -58,4 +58,11 @@ export default {
         transform: translateY(2px);
         transition: all .3s;
     }
+
+    @media only screen and (max-width: 500px) { 
+        .normalbutton {
+            padding:0.6rem 1.5rem;
+            font-size: .9rem;
+        }
+    }
 </style>

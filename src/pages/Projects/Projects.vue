@@ -1,22 +1,7 @@
 <template>
     <div class="projects">
-        <!--<projects-carousel></projects-carousel>-->
-        <base-card>
+        <base-card class="basecardwidth">
             <div class="featured">
-                <!--<div class="fcards">
-                    <projects-project :title="homeProjects[0].name" hidetitle prism class="left">
-                        <img class="projectimg" :src="require('../../assets/projectspics/' + homeProjects[1].projectImage + '.jpg')" :alt="homeProjects[1].name"/>
-                        <img class="projectimgheader height" :src="require('../../assets/projectspics/' + homeProjects[1].projectHeaderImage + '.jpg')" :alt="homeProjects[1].name"/>
-                    </projects-project>
-                    <projects-project  :title="homeProjects[1].name" hidetitle prism class="middle">
-                        <img class="projectimg" :src="require('../../assets/projectspics/' + homeProjects[0].projectImage + '.jpg')" :alt="homeProjects[0].name"/>
-                        <img class="projectimgheader"  :src="require('../../assets/projectspics/' + homeProjects[0].projectHeaderImage + '.jpg')" :alt="homeProjects[0].name"/>
-                    </projects-project>
-                    <projects-project title="Social Media App" hidetitle prism class="right">
-                        <img class="projectimg" :src="require('../../assets/projectspics/' + homeProjects[2].projectImage + '.jpg')" :alt="homeProjects[2].name"/>
-                        <img class="projectimgheader" :src="require('../../assets/projectspics/' + homeProjects[2].projectHeaderImage + '.jpg')" :alt="homeProjects[2].name"/>
-                    </projects-project>
-                </div>-->
                 <h1>ORIGINAL <span>PROJECTS</span></h1>
                 <p>I built all the projects in this portfolio from scratch, I didn't include any course projects.</p>
                 <div class="log">
@@ -48,7 +33,6 @@
                 <img class="projectimg" :src="require('../../assets/projectspics/' + project.projectImage + '.jpg')" :alt="project.name"/>
                 <img class="projectimgheader" :class="project.height ? 'height' : null" :src="require('../../assets/projectspics/' + project.projectHeaderImage + '.jpg')" :alt="project.name"/>
             </projects-project>
-            
         </div>
     </div>
 </template>
@@ -197,5 +181,91 @@ export default {
 
     .o {
         height: 28rem !important;
+    }
+
+    @media only screen and (max-width: 1919px) {
+        .basecardwidth {
+            width: 100%;
+        }
+
+        .featured {
+            width: 100%;
+        }
+
+        .allcards {
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @media only screen and (max-width: 1450px) {
+        .featured h1 {
+            font-size: 2.5rem;
+        }
+
+        .featured p {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media only screen and (max-width: 1365px) {
+        .allcards {
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media only screen and (max-width: 1100px) {
+        .featured h1 {
+            font-size: 2.2rem;
+        }
+
+        .featured p {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .featured {
+            height: 25rem;
+        }
+
+        .featured p {
+            width: 40rem;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (max-width: 750px) {
+        .allcards {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media only screen and (max-width: 740px) {
+        .featured {
+            height: 25rem;
+        }
+
+        .featured p {
+            width: 30rem;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .featured {
+            height: 25rem;
+        }
+
+        .featured h1 {
+            font-size: 1.8rem;
+        }
+
+        .featured p {
+            width: 22rem;
+            text-align: center;
+            font-size: 1rem;
+        }
     }
 </style>

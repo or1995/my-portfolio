@@ -1,6 +1,6 @@
 <template>
-    <base-card class="allowoverflow marginb">
-        <div class="detailscontainer" :class="{'inverted': invert}" :style="invert ? 'flex-direction: row-reverse' : null">
+    <base-card class="allowoverflow marginb detailscardwidth">
+        <div class="detailscontainer" :class="{'inverted': invert}">
             <div class="projectimgs" :class="{'invertedimg': invert}">
                 <img :src="require('../../../assets/projectspics/' + stringLink)"/>
             </div>
@@ -106,6 +106,10 @@ export default {
         margin-bottom: 2rem;
     }
 
+    .inverted {
+        flex-direction: row-reverse;
+    }
+
     .projectimgs {
         height: 35rem;
         width: 50%;
@@ -115,11 +119,11 @@ export default {
         transform-origin: 50% 50%;
         position: relative;
         overflow: hidden;
-        transform: rotate(-2deg);
+        /*transform: rotate(-2deg);*/
     }
 
     .invertedimg {
-        transform: rotate(2deg) !important;
+        /*transform: rotate(2deg) !important;*/
     }
 
     .projectimgs img {
@@ -178,5 +182,56 @@ export default {
         height: .3rem;
         border-radius: 50%;
         background-color: var(--accent-color);
+    }
+
+    @media only screen and (max-width: 1919px) { 
+        .detailscardwidth {
+            width: 100%;
+        }
+
+        .detailscontainer {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) { 
+        .projecttitle {
+            font-size: 2rem;
+        }
+
+        .detailscontainer {
+            height: auto;
+            padding: 2rem;
+        }  
+
+        .projectimgs {
+            height: 25rem;
+            width: 25rem;
+        } 
+
+        .projectfeatures {
+            padding: 1rem 2rem; 
+        }        
+    }
+
+    @media only screen and (max-width: 750px) {   
+        .projecttext {
+            width: 100%;
+        }
+
+        .inverted {
+            flex-direction: column-reverse;
+        }
+
+        .detailscontainer {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @media only screen and (max-width: 430px) { 
+        .projectimgs {
+            height: 20rem;
+            width: 20rem;
+        } 
     }
 </style>

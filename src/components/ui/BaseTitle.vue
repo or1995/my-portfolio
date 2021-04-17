@@ -60,4 +60,16 @@ export default {
         background-color: var(--accent-color);
         color: var(--main-very-dark-color);
     }
+
+    @media only screen and (max-width: 1919px) {
+        .title {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 1366px) {
+        .title h1 {
+            font-size: 2rem;
+        }
+    }
 </style>

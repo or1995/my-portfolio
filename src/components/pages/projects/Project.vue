@@ -30,7 +30,6 @@ export default {
 
 <style scoped>
     .project {
-        width: 36.7rem;
         height: 19rem;
         background-color: var(--main-dark-color);
         position: relative;
@@ -50,7 +49,7 @@ export default {
         transform: rotate(20deg);
         background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.1) 70%, rgba(255,255,255,0) 100%);
         animation: prismani 2s infinite;
-        z-index: 100000;
+        z-index: 100000000;
     }
 
     .project .title {
@@ -112,6 +111,24 @@ export default {
     .project:hover .overlay {
         opacity: 0;
         transition: all .3s;
+    }
+
+    @media only screen and (max-width: 1366px) {
+        .project {
+            height: 14rem;
+        }
+    }
+
+    @media only screen and (max-width: 1366px) {
+        .project {
+            height: 18rem;
+        }
+    }
+
+    @media only screen and (max-width: 750px) {
+        .project {
+            height: 22rem;
+        }
     }
 </style>
 

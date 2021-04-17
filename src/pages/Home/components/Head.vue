@@ -96,11 +96,12 @@ export default {
         align-items: center;
         justify-content: center;
         width: 100%;
+        border-radius: 5px;
         height: calc(100vh - 2rem); /* maybe will be 40rem */
         background:  linear-gradient(124deg, rgba(23,26,38,.98) 0%, rgba(26,29,43,.98) 100%), url("../../../assets/back/back1.jpg") no-repeat center center;
         background-size: cover;
         position: relative;
-       /* border: solid 5px var(--accent-color);*/ /* considering removing */
+        border: solid 1px var(--accent-color);
         overflow: hidden;
         transition: all .3s;
     }
@@ -110,7 +111,6 @@ export default {
     }
     .logo {
         display: flex;
-        width: 40rem;
         align-items: flex-end;
         justify-content: flex-end;
         z-index: 1000;
@@ -247,6 +247,144 @@ export default {
     .overlayo {
         height: 46rem !important;
     }
+
+    @media only screen and (max-width: 1440px) { 
+        .logo svg {
+            height: 10rem;
+        }
+
+        .logo .o{
+            animation: scaling2 1s linear forwards !important;
+        }
+
+        .text {
+            width: 30rem;
+            height: 15rem;
+        }
+        .divider {
+            width: 2px;
+            height: 13rem;
+        }
+
+        .text h1 {
+            font-size: 2rem;
+        }
+
+        .text p {
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+    }
+
+    @media only screen and (max-width: 900px) { 
+        .logo svg {
+            height: 8rem;
+        }
+
+        .logo .o{
+            margin-bottom: 0px;
+            animation: scaling3 1s linear forwards !important;
+        }
+
+        .text {
+            width: 25rem;
+            height: 15rem;
+        }
+        .divider {
+            width: 2px;
+        }
+
+        .text h1 {
+            font-size: 1.8rem;
+        }
+
+        .text p {
+            font-size: 1rem;
+            line-height: 1.2;
+        }
+    }
+
+    @media only screen and (max-width: 760px) { 
+        .head {
+            flex-direction: column;
+            border: solid 1px var(--accent-color);
+        }
+
+        .logo svg {
+            height: 5rem;
+        }
+
+        .logo .o{
+            animation: scaling4 1s linear forwards !important;
+        }
+
+        .divider {
+            display: none;
+        }
+
+        .text {
+            align-items: center;
+            justify-content: center;
+            width: 30rem;
+            height: 12rem;
+            margin-left: 0;
+        }
+
+        .text p {
+            text-align: center;
+        }
+
+        .text div {
+            justify-content: center;
+        }
+    }
+
+    @media only screen and (max-width: 500px) { 
+        .head {
+            flex-direction: column;
+            border: solid 1px var(--accent-color);
+        }
+
+        .logo svg {
+            height: 5rem;
+        }
+
+        .logo .o{
+            animation: scaling4 1s linear forwards !important;
+        }
+
+        .divider {
+            display: none;
+        }
+
+        .text {
+            align-items: center;
+            justify-content: center;
+            width: 23rem;
+            height: 14.2rem;
+            margin-left: 0;
+        }
+
+        .text div {
+            justify-content: center;
+        }
+    }
+
+    @media only screen and (max-width: 440px) { 
+        .text {
+            align-items: center;
+            justify-content: center;
+            width: 20rem;
+            height: 14.2rem;
+            margin-left: 0; 
+            margin-top: 1rem;
+        }
+
+        .text h1 {
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+        }
+    }
 </style>
 
 <style>
@@ -272,16 +410,76 @@ export default {
             margin-right: -3.2rem;
         }
     }
-    
-    /*@keyframes logomove {
+
+    @keyframes scaling2 {
         0% {
-            transform: translateX(100%);
+            height: 0;
+            opacity: 0;
+            margin-right: -2rem;
+        }
+        50% {
+            height: 0;
+            opacity: 0;
+            margin-right: -2rem;
+        }
+        75% {
+            height: 9.4rem;
+            opacity: 0;
+            margin-right: -3.2rem;
         }
         100% {
-            transform: translateX(0);
-            margin-right: 2rem;
+            height: 9.4rem;
+            opacity: 1;
+            margin-right: -3.2rem;
         }
-    }*/
+    }
+
+    @keyframes scaling3 {
+        0% {
+            height: 0;
+            opacity: 0;
+            margin-right: -2rem;
+        }
+        50% {
+            height: 0;
+            opacity: 0;
+            margin-right: -2rem;
+        }
+        75% {
+            height: 7.5rem;
+            opacity: 0;
+            margin-right: -3.2rem;
+        }
+        100% {
+            height: 7.5rem;
+            opacity: 1;
+            margin-right: -3.2rem;
+        }
+    }
+
+    @keyframes scaling4 {
+        0% {
+            height: 0;
+            opacity: 0;
+            margin-right: -2rem;
+        }
+        50% {
+            height: 0;
+            opacity: 0;
+            margin-right: -2rem;
+        }
+        75% {
+            height: 4.7rem;
+            opacity: 0;
+            margin-right: -2.4rem;
+        }
+        100% {
+            height: 4.7rem;
+            opacity: 1;
+            margin-right: -2.4rem;
+        }
+    }
+    
     @keyframes textani {
         0% {
             opacity: 0;

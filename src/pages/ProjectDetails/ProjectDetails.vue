@@ -1,6 +1,6 @@
 <template>
     <div class="details">
-        <base-card>
+        <base-card class="detailsheadcard">
             <div class="detailshead">
                 <h1><span>{{ titlefirst }} </span>{{ titlerest }}</h1>
                 <div class="projectlinks">
@@ -195,5 +195,57 @@ export default {
     .o {
         height: 28rem !important;
     }
+
+    @media only screen and (max-width: 1919px) { 
+        .detailsheadcard {
+            width: 100%;
+        }
+
+        .detailshead {
+            width: 100%;
+        }      
+    }
+
+    @media only screen and (max-width: 1200px) { 
+        .details {
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .projectfeatures li {
+            font-size: 1.2rem;
+        }        
+    }
+
+    @media only screen and (max-width: 900px) { 
+        .detailshead h1 {
+            font-size: 2.5rem;
+        }  
+    }
+
+    @media only screen and (max-width: 500px) { 
+        .detailshead h1 {
+            font-size: 2rem;
+        } 
+
+        .projectlinks {
+            gap: 1rem;
+        }
+
+        .projectlinks a svg {
+            width: 2rem;
+        }
+
+        .projectlinks a h3 {
+            font-size: 1rem;
+        } 
+}
+
+
 
 </style>

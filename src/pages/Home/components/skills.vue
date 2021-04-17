@@ -40,13 +40,11 @@ export default {
 
     .skillscards {
         width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
         align-items: center;
         justify-content: center;
-    }
-
-    .skillscards div:not(:last-child) {
-        margin-right: 1rem;
     }
 
     .skillscards div ul li {
@@ -57,15 +55,31 @@ export default {
         margin-bottom: 1rem;
     }
 
-    /*.skillscards div ul li::before {
-        content: '';
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background-color: var(--accent-color);
-        position: absolute;
-        top: .5rem;
-        left: -1rem;
-    }*/
+    @media only screen and (max-width: 1919px) {
+        .skills {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 1500px) {
+        .skillscards div ul li {
+            font-size: 1.3rem;
+            margin-bottom: .7rem;
+        }
+    }
+
+    @media only screen and (max-width: 1140px) {
+        .skillscards {
+             grid-template-columns: 100%;
+             grid-template-rows: 1fr 1fr 1fr;
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+        .skillscards div ul li {
+            font-size: 1.1rem;
+            margin-bottom: .7rem;
+        }
+    }
 
 </style>

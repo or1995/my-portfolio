@@ -20,4 +20,10 @@ export default {
         margin-top: 1rem;
         width: 112rem;
     }
+
+    @media only screen and (max-width: 1919px) {
+        .contact {
+            width: 100%;
+        }
+    }
 </style>

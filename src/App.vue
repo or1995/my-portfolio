@@ -135,6 +135,19 @@ body {
   }
 }
 
+@media only screen and (max-width: 1919px) {
+  .main-container {
+    width: calc(100% - 4.5rem);
+    margin-left: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 @media only screen and (min-width: 2560px) {
   html {
     font-size: 20px;
@@ -144,6 +157,18 @@ body {
 @media only screen and (min-width: 3840px) {
   html {
     font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .router-link-active h1 {
+    color: var(--main-color) !important;
+    text-decoration: underline;
   }
 }
 </style>

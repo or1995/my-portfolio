@@ -72,6 +72,21 @@ export default {
      margin-right: -.1rem;
  }
 
+ @media only screen and (max-width: 1919px) { 
+     svg {
+        fill: var(--main-light-color);
+        height: 2.2rem;
+        animation: showlogo 1s;
+    }
+
+    .o {
+        fill: var(--main-light-color);
+        height: 2rem;
+        margin-right: -.3rem;
+        animation: showlogoo 1s !important;
+    }
+}
+
 
 </style>
 

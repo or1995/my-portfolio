@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
     .skill {
-        width: 36.5rem;
+        width: 100%;
         height: 30rem;
         background-color: var(--main-dark-color);
         background: var(--gradient);
@@ -114,5 +114,19 @@ export default {
         height: 4rem;
         width: auto;
         transform: rotate(90deg);
+    }
+
+    @media only screen and (max-width: 1500px) {
+        .skill {
+            height: 22rem;
+        }
+
+        .title {
+            height: 6rem;
+        }
+
+        .title h3 {
+            font-size: 2rem;
+        }
     }
 </style>
