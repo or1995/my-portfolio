@@ -156,7 +156,7 @@ export default {
         overflow: hidden;
         background-color: var(--main-dark-color);
         background: var(--gradient);
-        width: 112rem;
+        width: 100%;
         height: 40rem;
         display: flex;
         align-items: center;
@@ -343,7 +343,7 @@ export default {
 
     .bigtech {
         position: relative;
-        top: -4.5rem;
+        top: -2.5rem;
         right: 2rem;
         transform: rotate(43deg);
     }
@@ -450,7 +450,7 @@ export default {
         color: var(--accent-color);
     }  
 
-    @media only screen and (max-width: 1919px) {
+    @media only screen and (max-width: 1920px) {
         .fullwidthcard {
             width: 100%;
             height: 100%;

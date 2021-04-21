@@ -88,7 +88,7 @@ export default {
     .title h3 {
         font-family: var(--main-font);
         color: var(--light-text);
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 300;
         z-index: 11000;
         margin-top: -8%;

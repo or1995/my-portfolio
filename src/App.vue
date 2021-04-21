@@ -142,6 +142,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 1366px) {
+  html {
+    font-size: 15px;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   html {
     font-size: 14px;

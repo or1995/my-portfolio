@@ -304,7 +304,7 @@
 
     .section-content p {
         font-family: inherit;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         line-height: 1.3;
         font-weight: 400;
         color: var(--grey-text);
@@ -353,7 +353,7 @@
         padding-left: 1rem;
         font-family: inherit;
         color: var(--light-text);
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .content-main {

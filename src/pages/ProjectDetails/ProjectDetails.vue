@@ -94,7 +94,7 @@ export default {
     .projectfeatures li {
         list-style: none;
         font-family: var(--main-font);
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-bottom: .8rem;
         color: var(--light-text);
         position: relative;

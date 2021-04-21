@@ -28,9 +28,8 @@ export default createStore({
                     height: true,
                     home: true,
                     tech: ['Python Django', 'Django Template Engine', 'Postgresql DataBase', 'Vanilla JavaScript', 'CSS, CSS Grids, CSS FlexBox, Media Queries'],
-                    features: ['Responsive Design', 'Image Upload', 'Authentication, Sign up and log in', 'Image Compression', 'Pagination', 'Follow, like and comment', 'Carousel (Built using vanilla javascript only)', 'Django Admin Dashboard'],
-                    imgsOne: [],
-                    imgsTwo: []
+                    features: ['Responsive Design', 'Image Upload', 'Authenticatio,llllllllllllllllllllllllllljmngh;n, Sign up and log in', 'Image Compression', 'Pagination', 'Follow, like and comment', 'Carousel (Built using vanilla javascript only)', 'Django Admin Dashboard'],
+                    url: 'http://ec2-3-142-156-72.us-east-2.compute.amazonaws.com/'
                 },
                 {
                     name: 'Social Media App',

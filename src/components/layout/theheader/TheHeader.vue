@@ -214,7 +214,7 @@ header {
 
 .menu {
     pointer-events: none;
-    transform: translateY(-100%);
+    opacity: 0;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -232,7 +232,7 @@ header {
 
 .menushawn {
     pointer-events: all;
-    transform: translateY(0);
+    opacity: 1;
     transition: all .5s;
 }
 

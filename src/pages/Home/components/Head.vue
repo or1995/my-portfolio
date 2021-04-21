@@ -77,7 +77,7 @@ export default {
         document.addEventListener('scroll', this.mousewheel);
     },
     beforeUnmount() {
-       document.removeEventListener('scroll', this.mousewheel);
+        document.removeEventListener('scroll', this.mousewheel);
     },
     methods: {
         mousewheel() {
@@ -208,23 +208,23 @@ export default {
     .mousewheel {
         position: absolute;
         bottom: 5rem;
-        width: 2rem;
-        height: 6rem;
-        border: 2px solid var(--accent-color);
+        width: 1.2rem;
+        height: 4.4rem;
+        border: 1px solid var(--accent-color);
         display: flex;
         align-items: flex-start;
         justify-content: center;
         border-radius: 15px;
         z-index: 1000000;
-        opacity: 0.4;
+        opacity: 0.2;
     }
     .mousewheel div {
-        margin-top: 5px;
-        width: 1rem;
-        height: 2.5rem;
+        margin-top: 2px;
+        width: .7rem;
+        height: 2rem;
         background-color: var(--accent-color);
         border-radius: 8px;
-        animation: mousewheelani 1s infinite;
+        animation: mousewheelani 2s infinite;
     }
 
     .overlaylogo {
@@ -490,10 +490,10 @@ export default {
     }
     @keyframes mousewheelani {
         0% {
-            margin-top: 5px;
+            margin-top: 2px;
         }
         100% {
-            margin-top: 150%;
+            margin-top: 200%;
         }
     }
 </style>

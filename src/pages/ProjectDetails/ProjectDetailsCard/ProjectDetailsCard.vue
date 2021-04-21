@@ -149,7 +149,7 @@ export default {
     }
 
     .projecttitle {
-        font-size: 2.6rem;
+        font-size: 2.1rem;
         text-transform: uppercase;
         font-weight: 500;
         color: var(--light-text);
