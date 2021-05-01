@@ -2,7 +2,9 @@
         <div class="resume">
             <div class="cv-header">
                 <div class="namepanel">
-                    <div class="name"><span>Omar</span> Ali Abdulwahab</div>
+                    <div class="name"><span>Omar</span> Ali Abdulwahab<a class="download" href="/">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18 1h4v-7h4v7h4l-6 6-6-6z"/></svg>  
+                        </a></div>
                     <div class="title">
                         <h4 class="job">Front-end web developer</h4>
                         <h4>|</h4>
@@ -204,6 +206,8 @@
         color: var(--light-text);
         font-family: inherit;
         z-index: 10000;
+        display: flex;
+        align-items: center;
     }
     
     .name span {
@@ -225,6 +229,21 @@
         font-size: 1.2rem;
         margin-right: .4rem;
         font-weight: 400;
+    }
+
+    .download {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2rem;
+    }
+
+    .download svg {
+        fill: var(--accent-color);
+        height: 2rem;
+        width: auto;
     }
 
     .content {
@@ -411,6 +430,12 @@
             width: 100%;
             padding-left: 0;
             padding-right: 0;
+        }
+    }
+
+    @media only screen and (max-width: 1366px) {
+        .name {
+            font-size: 3.2rem;
         }
     }
 

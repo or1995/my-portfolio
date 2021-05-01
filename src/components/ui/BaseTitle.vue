@@ -54,11 +54,7 @@ export default {
     }
 
     .title span {
-        padding-left: .3rem;
-        padding-right: .3rem;
-        border-radius: 2px;
-        background-color: var(--accent-color);
-        color: var(--main-very-dark-color);
+        color: var(--accent-color);
     }
 
     @media only screen and (max-width: 1919px) {

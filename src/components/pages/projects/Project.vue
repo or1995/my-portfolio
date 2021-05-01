@@ -113,21 +113,46 @@ export default {
         transition: all .3s;
     }
 
+
     @media only screen and (max-width: 1366px) {
         .project {
             height: 14rem;
         }
+
+        .title {
+            width: 11rem;
+            height: 3rem;
+        }
+
+        .title h3 {
+            font-size: 1rem;
+        }
     }
 
-    @media only screen and (max-width: 1366px) {
+    @media only screen and (max-width: 1000px) {
         .project {
-            height: 18rem;
+            height: 16rem;
         }
     }
 
     @media only screen and (max-width: 750px) {
         .project {
             height: 22rem;
+        }
+
+        .title {
+            width: 15rem;
+            height: 3.5rem;
+        }
+
+        .title h3 {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .project {
+            height: 17rem;
         }
     }
 </style>

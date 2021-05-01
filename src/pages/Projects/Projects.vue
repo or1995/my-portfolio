@@ -164,7 +164,7 @@ export default {
 
     .log {
         position: absolute;
-        bottom: -4rem;
+        bottom: 0rem;
         right: -30rem;
         display: flex;
         align-items: flex-end;
@@ -199,6 +199,10 @@ export default {
     }
 
     @media only screen and (max-width: 1450px) {
+        .featured {
+            height: 25rem;
+        }
+
         .featured h1 {
             font-size: 2.5rem;
         }
@@ -208,7 +212,7 @@ export default {
         }
     }
 
-    @media only screen and (max-width: 1365px) {
+    @media only screen and (max-width: 1000px) {
         .allcards {
             width: 100%;
             grid-template-columns: 1fr 1fr;

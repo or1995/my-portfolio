@@ -4,7 +4,7 @@
             <h3><span>A</span>bout Me</h3>
             <p>
                 Hello my name is Omar Ali. I love everything about web development, I know two frontend frameworks React (technically is a library) and Vue,
-                 and i know one backend framework Django and currently learning nodejs. I like to write the pure css for my components but i can use libraries like bootstrap or tailwindcss, or use ready to use components like material-ui,
+                 and i know one backend framework Django and currently learning nodejs. I like to write pure css for my components but i can use libraries like bootstrap or tailwindcss, or ready to use components like material-ui,
                  for global state management i use redux or context api for react and vuex for vue. I can use Django both ways server side rendering and rest api with frontend framework. 
             </p>
             <div class="links">
@@ -14,6 +14,27 @@
                 <a href="https://www.linkedin.com/in/omar-ali-webdevelopment" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2500" viewBox="7.025 7.025 497.951 497.95"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-974.482" y1="1306.773" x2="-622.378" y2="1658.877" gradientTransform="translate(1054.43 -1226.825)"><stop offset="0" stop-color="var(--accent-color)"/><stop offset="1" stop-color="var(--accent-color)"/></linearGradient><path d="M256 7.025C118.494 7.025 7.025 118.494 7.025 256S118.494 504.975 256 504.975 504.976 393.506 504.976 256C504.975 118.494 393.504 7.025 256 7.025zm-66.427 369.343h-54.665V199.761h54.665v176.607zM161.98 176.633c-17.853 0-32.326-14.591-32.326-32.587 0-17.998 14.475-32.588 32.326-32.588s32.324 14.59 32.324 32.588c.001 17.997-14.472 32.587-32.324 32.587zm232.45 199.735h-54.4v-92.704c0-25.426-9.658-39.619-29.763-39.619-21.881 0-33.312 14.782-33.312 39.619v92.704h-52.43V199.761h52.43v23.786s15.771-29.173 53.219-29.173c37.449 0 64.257 22.866 64.257 70.169l-.001 111.825z" fill="url(#a)"/></svg>
                 </a>
+            </div>
+            <div class="overlaylogo">
+                <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path ref="leftarrow" d="M169.6 0H109.8L0 101.5L109.8 203H169.6L64.5 101.5L169.6 0Z"/>
+                </svg>
+                <svg viewBox="0 0 149 184" class="o" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M0 0H148.9V183.3H0V0ZM45.8 137.5H103.1V45.8H45.8V137.5Z" />
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="148.9" height="183.3" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <svg viewBox="0 0 117 204" fill="none" class="slash" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M54.3 204L117 0H62.7L0 204H54.3Z" />
+                </svg>
+                <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"/>
+                </svg>
             </div>
         </base-card>
     </div>
@@ -29,6 +50,7 @@
     }
 
     .about {
+        position: relative;
         padding: 11rem 5rem;
         width: 112rem;
         height: 50rem;
@@ -38,6 +60,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
     }
 
     .about h3 {
@@ -49,6 +72,7 @@
         font-size: 2.8rem;
         margin-bottom: 1.8rem;
         text-transform: uppercase;
+        z-index: 10000;
     }
 
     .about p {
@@ -59,6 +83,7 @@
         font-weight: 400;
         font-size: 1.5rem;
         line-height: 1.4;
+        z-index: 10000;
     }
 
     .links {
@@ -67,6 +92,7 @@
         align-items: center;
         justify-content: space-between;
         width: 5rem;
+        z-index: 10000;
     }
 
     .links a svg {
@@ -77,6 +103,22 @@
 
     .about h3 span {
         color: var(--accent-color);
+    }
+
+    .overlaylogo {
+        position: absolute;
+        left: -25rem;
+        bottom: -2rem;
+    }
+
+    .overlaylogo svg {
+        height: 35rem;
+        fill: var(--main-very-dark-color);
+        transition: all .3s;
+    }
+
+    .o {
+        height: 31rem !important;
     }
     
     @media only screen and (max-width: 1920px) { 

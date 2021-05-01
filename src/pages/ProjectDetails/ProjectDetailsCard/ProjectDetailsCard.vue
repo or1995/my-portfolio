@@ -1,7 +1,8 @@
 <template>
+    <img-modal :name="name" :first="firstmodal" :second="secondmodal" @quit-imgs="quitimgs"/>
     <base-card class="allowoverflow marginb detailscardwidth">
         <div class="detailscontainer" :class="{'inverted': invert}">
-            <div class="projectimgs" :class="{'invertedimg': invert}">
+            <div class="projectimgs" :class="{'invertedimg': invert}" @click="openimgs">
                 <img :src="require('../../../assets/projectspics/' + stringLink)"/>
             </div>
             <div class="projecttext">
@@ -16,16 +17,22 @@
 </template>
 
 <script>
+import ImgModal from '../ImgModal/ImgModal.vue';
 export default {
     props: {
         invert: Boolean, 
         title: String,
         name: String
     },
+    components: {
+        ImgModal
+    },
     data() {
         return {
             pagenum: 1,
-            pagenuminvert: 4
+            pagenuminvert: 4,
+            firstmodal: false,
+            secondmodal: false
         }
     },
     mounted() {
@@ -67,14 +74,26 @@ export default {
                 this.pagenum = 3;
             }
             this.turnpage();
+        },
+        openimgs() {
+            console.log('hello');
+            if(!this.invert) {
+                this.firstmodal = true;
+            } else {
+                this.secondmodal = true;
+            }
+        },
+        quitimgs() {
+            this.firstmodal = false;
+            this.secondmodal = false;
         }
     },
     computed: {
         stringLink() {
             if(!this.invert) {
-                return this.namenospace + '/' + this.pagenum.toString() + '.jpg';
+                return this.namenospace + '/' + this.pagenum.toString() + '.png';
             } else {
-                return this.namenospace + '/' + this.pagenuminvert.toString() + '.jpg';
+                return this.namenospace + '/' + this.pagenuminvert.toString() + '.png';
             }
         },
         namenospace() {
@@ -99,11 +118,10 @@ export default {
         justify-content: center;
         background-color: var(--main-dark-color);
         background: var(--gradient);
-        padding: 0 4rem;
     }
 
     .marginb {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .inverted {
@@ -111,19 +129,21 @@ export default {
     }
 
     .projectimgs {
-        height: 35rem;
+        height: 100%;
         width: 50%;
-        border: solid 3px var(--accent-color);
         background-color: var(--main-dark-color);
         box-shadow: 0 4px 8px rgba(0,0,0,0.38);
         transform-origin: 50% 50%;
         position: relative;
         overflow: hidden;
+        border-bottom-right-radius: 2rem;
+        border-bottom-left-radius: 0rem;
         /*transform: rotate(-2deg);*/
     }
 
     .invertedimg {
-        /*transform: rotate(2deg) !important;*/
+        border-bottom-right-radius: 0rem;
+        border-bottom-left-radius: 2rem;
     }
 
     .projectimgs img {

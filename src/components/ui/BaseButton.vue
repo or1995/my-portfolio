@@ -26,7 +26,8 @@ export default {
         border: none;
         justify-content: center;
         padding:0.7rem 1.5rem;
-        border-radius:2px;
+        border-radius: 2px;
+        border-bottom-right-radius: 1rem;
         text-transform: capitalize;
         font-size: 1.1rem;
         font-family: var(--main-font);

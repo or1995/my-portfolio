@@ -2,7 +2,7 @@
     <div class="projects">
         <section-title text="projects"></section-title>
         <div class="cards">
-            <projects-project v-for="project in homeProjects" :key="project.name" :title="project.name" hidetitle prism class="left">
+            <projects-project v-for="project in homeProjects" :key="project.name" :title="project.name" prism class="left">
                 <img class="projectimg" :src="require('../../../assets/projectspics/' + project.projectImage + '.jpg')" :alt="project.name"/>
                 <img class="projectimgheader" :class="project.height ? 'height' : null" :src="require('../../../assets/projectspics/' + project.projectHeaderImage + '.jpg')" :alt="project.name"/>
             </projects-project>
@@ -99,7 +99,7 @@ export default {
         }
     }
 
-    @media only screen and (max-width: 1140px) {
+    @media only screen and (max-width: 1000px) {
         .cards {
             grid-template-columns: 1fr 1fr 0px;
         }
