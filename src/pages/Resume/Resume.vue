@@ -2,7 +2,7 @@
         <div class="resume">
             <div class="cv-header">
                 <div class="namepanel">
-                    <div class="name"><span>Omar&nbsp;</span> Ali Abdulwahab<a class="download" href="/">
+                    <div class="name"><span>Omar&nbsp;</span> Ali Abdulwahab<a class="download" href="https://drive.google.com/file/d/1N94lt7KIvrT1I6R_v5EDS_yN5sVnFL9c/view?fbclid=IwAR3witWZOzMPh7HXUqYm2s_Au13CsSciBx4ZbrlJJ_CGbftbs8sJioB5yCo" target="_blank">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18 1h4v-7h4v7h4l-6 6-6-6z"/></svg>  
                         </a></div>
                     <div class="title">
