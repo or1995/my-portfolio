@@ -51,6 +51,7 @@ export default createStore({
                     height: true,
                     tech: ['Vue, Vue Router, Vuex', 'CSS, CSS Grids, CSS FlexBox, Media Queries'],
                     features: ['Responsive Design', 'Dark Theme'],
+                    url: 'https://omaralidev.com'
                 },
                 {
                     name: 'University Website',
