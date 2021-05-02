@@ -374,7 +374,7 @@ export default {
     @media only screen and (max-width: 760px) { 
         .head {
             flex-direction: column;
-            border: solid 1px var(--accent-color);
+            /*border: solid 1px var(--accent-color);*/
         }
 
         .logo-wrapper {
@@ -431,7 +431,7 @@ export default {
     @media only screen and (max-width: 500px) { 
         .head {
             flex-direction: column;
-            border: solid 1px var(--accent-color);
+            /*border: solid 1px var(--accent-color);*/
         }
 
         .divider {

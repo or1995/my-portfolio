@@ -192,7 +192,7 @@ header {
     border-bottom-right-radius: 15px;
     border: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.38);
-    z-index: 100000000;
+    z-index: 1000000000000000;
     outline: none;
     transition: all .3s;
     cursor: pointer;
@@ -223,7 +223,7 @@ header {
     top: 0;
     left: 0;
     width: 100vw;
-    z-index: 10000000;
+    z-index: 1000000000;
     height: 100vh;
     background-color: var(--accent-color);
     background: linear-gradient(310deg, rgba(245,189,110,1) 0%, rgba(245,175,78,1) 100%);

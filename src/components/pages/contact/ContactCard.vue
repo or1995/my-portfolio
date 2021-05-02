@@ -1,4 +1,10 @@
 <template>
+    <contact-confirm :show="success">
+        <h3 class="confirmmessage"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.25 16.518l-4.5-4.319 1.396-1.435 3.078 2.937 6.105-6.218 1.421 1.409-7.5 7.626z"/></svg>Message was successfully sent</h3>
+    </contact-confirm>
+    <contact-confirm :show="httpError">
+        <h3 class="confirmmessage"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"/></svg>Something went wrong!</h3>
+    </contact-confirm>
     <base-card :scrollan="scrollan" :class="big ? 'fullwidthcard' : null">
         <div class="contactcard" :class="big ? 'big' : null">
             <form class="contactform" @submit.prevent="sendEmail" v-if="!isLoading && !httpError">
@@ -72,7 +78,11 @@
 </template>
 
 <script>
+import ContactConfirm from "./ContactConfirm/ContactConfirm.vue";
 export default {
+    components: {
+        ContactConfirm
+    },
     props: {
         big: Boolean,
         scrollan: String
@@ -88,10 +98,14 @@ export default {
             err: false,
             httpError: false,
             isLoading: false,
+            success: false,
         }
     },
     methods: {
         sendEmail() {
+            this.httpError = false;
+            this.success = false;
+
             if (this.email === '' || !this.email.includes('@')) {
                 this.emailErr = true;
                 this.err = true;
@@ -131,11 +145,11 @@ export default {
                 }
             }).then(response => {
                 this.isLoading = false;
+                this.success = true,
                 console.log('done',response);
-            }).catch(error => {
+            }).catch(() => {
                 this.isLoading = false;
                 this.httpError = true;
-                console.log(error)
             });
             },
             clearError(val) {
@@ -450,6 +464,23 @@ export default {
         color: var(--accent-color);
     }  
 
+    .confirmmessage {
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--main-font);
+        color: var(--main-dark-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .confirmmessage svg {
+        fill: var(--main-dark-color);
+        margin-right: .5rem;
+        height: 1.5rem;
+        width: auto;
+    }
+
     @media only screen and (max-width: 1920px) {
         .fullwidthcard {
             width: 100%;
@@ -460,6 +491,8 @@ export default {
             height: 100% !important;
         }
     }
+
+
 
     @media only screen and (max-width: 1660px) { 
         .contactcard {

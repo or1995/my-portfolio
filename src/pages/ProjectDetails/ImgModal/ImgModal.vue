@@ -96,7 +96,7 @@ export default {
     .exit {
         position: absolute;
         top: 1rem;
-        left: 2rem;
+        right: 2rem;
         background-color: transparent;
         border: none;
         cursor: pointer;
@@ -120,9 +120,9 @@ export default {
     }
 
     .left span {
-        font-size: 10rem;
+        font-size: 3rem;
         color: var(--accent-color);
-        opacity: .4;
+        opacity: .2;
         transition: all .3s;
         -webkit-user-select: none; /* Safari */        
         -moz-user-select: none; /* Firefox */
@@ -143,9 +143,9 @@ export default {
     }
 
     .right span {
-        font-size: 10rem;
+        font-size: 3rem;
         color: var(--accent-color);
-        opacity: .4;
+        opacity: .2;
         transition: all .3s;
         -webkit-user-select: none; /* Safari */        
         -moz-user-select: none; /* Firefox */
@@ -156,6 +156,13 @@ export default {
     .right:hover span {
         opacity: .9;
         transition: all .3s
+    }
+
+     @media only screen and (max-width: 700px) { 
+        .backdrop img {
+            height: auto;
+            width: 70%;
+        } 
     }
 
 </style>
