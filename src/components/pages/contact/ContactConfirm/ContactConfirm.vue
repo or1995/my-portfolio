@@ -45,10 +45,10 @@ export default ({
     }
 
     .confirmmodal {
-        background-color: var(--accent-color);
+        background-color: var(--accent-light-color);
         padding: 1rem 2rem;
         border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.38);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .info-enter-active {

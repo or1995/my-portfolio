@@ -104,8 +104,8 @@ export default {
 
     .exit span {
         font-family: var(--main-font);
-        font-size: 4rem;
-        color: var(--light-text);
+        font-size: 3rem;
+        color: var(--accent-color);
         -webkit-user-select: none; /* Safari */        
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* IE10+/Edge */

@@ -118,6 +118,8 @@ export default {
         justify-content: center;
         background-color: var(--main-dark-color);
         background: var(--gradient);
+        border-radius: 5px;
+        overflow: hidden;
     }
 
     .marginb {
@@ -132,7 +134,7 @@ export default {
         height: 100%;
         width: 50%;
         background-color: var(--main-dark-color);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.38);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         transform-origin: 50% 50%;
         position: relative;
         overflow: hidden;

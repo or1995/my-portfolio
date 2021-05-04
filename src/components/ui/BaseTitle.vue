@@ -32,7 +32,6 @@ export default {
         align-items: flex-start;
         justify-content: flex-start;
         padding: 2rem .4rem;
-        margin-top: 2rem;
     }
 
     .title div {
@@ -44,13 +43,13 @@ export default {
 
     .title h1 {
         font-family: var(--main-font);
-        font-size: 2.4rem;
+        font-size: 2.5rem;
         color: var(--light-text);
         text-transform: uppercase;
         font-weight: 400;
         display: flex;
         align-items: flex-start;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        text-shadow: 0px 2px 5px rgba(0,0,0,0.2);
     }
 
     .title span {

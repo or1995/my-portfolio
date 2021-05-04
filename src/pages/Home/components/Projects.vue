@@ -82,10 +82,18 @@ export default {
         color: var(--accent-color);
         font-weight: 500;
         font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         font-family: var(--main-font);
         margin-right: 1rem;
         transition: all .3s
+    }
+
+    .morelink span {
+        font-size: .9rem;
+        margin-left: .2rem;
     }
 
     .morelink:hover {

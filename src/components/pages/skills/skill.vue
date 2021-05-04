@@ -28,20 +28,20 @@ export default {
 <style scoped>
     .skill {
         width: 100%;
-        height: 30rem;
+        height: 22rem;
         background-color: var(--main-dark-color);
-        background: var(--gradient);
         position: relative;
         overflow: hidden;
-        padding-top: 1rem;
+        display: flex;
     }
 
     .title {
-        width: 100%;
-        height: 8rem;
+        height: 100%;
+        width: 4rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: var(--main-very-dark-color);
     }
 
     .title h3 {
@@ -50,6 +50,7 @@ export default {
         font-weight: 400;
         color: var(--light-text);
         text-transform: uppercase;
+        transform: rotate(-90deg);
     }
 
     .title h3 span {
@@ -59,72 +60,16 @@ export default {
 
     .skilllist {
         width: 100%;
-        padding-left: 2rem;
-        padding-right: 1rem;
+        padding-left: .2rem;
+        padding-right: .2rem;
         list-style: none;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .arrowsone {
-        position: absolute;
-        top: -5rem;
-        right: -2rem;
-        display: flex;
-        align-items: center;
         justify-content: center;
-        transform: rotate(-45deg);
-    }
-
-    .arrowstwo {
-        position: absolute;
-        bottom: -5rem;
-        left: -2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: rotate(-45deg);
-    }
-
-    .arrowsup {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-right: 1rem;
-    }
-
-    .arrowsup svg {
-        fill: var(--main-very-dark-color);
-        height: 4rem;
-        width: auto;
-        transform: rotate(-90deg);
-    }
-
-    .arrowsdown {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .arrowsdown svg {
-        fill: var(--main-very-dark-color);
-        height: 4rem;
-        width: auto;
-        transform: rotate(90deg);
     }
 
     @media only screen and (max-width: 1500px) {
-        .skill {
-            height: 22rem;
-        }
-
-        .title {
-            height: 6rem;
-        }
-
         .title h3 {
             font-size: 2rem;
         }

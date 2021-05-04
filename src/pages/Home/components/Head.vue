@@ -11,33 +11,33 @@
                             <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
                             </filter>
                         </defs>
-                        <path  overflow="visible" filter="url(#f1)" ref="leftarrow" d="M169.6 0H109.8L0 101.5L109.8 203H169.6L64.5 101.5L169.6 0Z"/>
+                        <path  overflow="visible" ref="leftarrow" d="M169.6 0H109.8L0 101.5L109.8 203H169.6L64.5 101.5L169.6 0Z"/>
                     </svg>
                     <svg viewBox="0 0 149 184" class="o" ref="o" fill="none" xmlns="http://www.w3.org/2000/svg"  overflow="visible">
                         <g clip-path="url(#clip0)">
-                        <path  overflow="visible" filter="url(#f1)" d="M0 0H148.9V183.3H0V0ZM45.8 137.5H103.1V45.8H45.8V137.5Z" />
+                        <path  overflow="visible" d="M0 0H148.9V183.3H0V0ZM45.8 137.5H103.1V45.8H45.8V137.5Z" />
                         </g>
                         <defs>
                         <clipPath id="clip0">
-                        <rect  overflow="visible" filter="url(#f1)" width="148.9" height="183.3" fill="white"/>
+                        <rect  overflow="visible" width="148.9" height="183.3" fill="white"/>
                         </clipPath>
                         </defs>
                     </svg>
                     <svg style="margin-right: -2rem" viewBox="0 0 117 204" fill="none" class="slash" xmlns="http://www.w3.org/2000/svg"  overflow="visible">
-                        <path filter="url(#f1)" id="slashpath" d="M54.3 204L117 0H62.7L0 204H54.3Z"  overflow="visible"/>
+                        <path id="slashpath" d="M54.3 204L117 0H62.7L0 204H54.3Z"  overflow="visible"/>
                     </svg>
                     <svg viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg"  overflow="visible">
-                        <path filter="url(#f1)" d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"  overflow="visible"/>
+                        <path d="M59.8 0H0L105.2 101.5L0 203H59.8L169.6 101.5L59.8 0Z"  overflow="visible"/>
                     </svg>
                 </div>
             </div>
             <!--<div class="divider" ref="divide"></div>-->
             <div class="text-wrapper">
                 <div class="text">
-                    <h1>My Name is <span>Omar Ali</span></h1>
+                    <h1>My Name is <span>OMAR ALI</span></h1>
                     <p>I'm a web developer</p>
                     <div>
-                        <base-button link to="/projects">My Projects</base-button>
+                        <base-button link cta to="/projects">My Projects</base-button>
                     </div>
                 </div>
             </div>
@@ -78,6 +78,7 @@
                     </a>
                 </div>
             </div>
+            <div class="sideone"></div>
             <div class="sideother">
             </div>
         </div>
@@ -112,7 +113,7 @@ export default {
         width: 100%;
         border-radius: 5px;
         height: calc(100vh - 2rem); /* maybe will be 40rem */
-        background:  linear-gradient(124deg, rgba(23,26,38,.992) 0%, rgba(26,29,43,.992) 100%), url("../../../assets/back/back1.jpg") no-repeat center center;
+        background:  linear-gradient(124deg, rgba(23,26,38,.995) 0%, rgba(26,29,43,.995) 100%), url("../../../assets/back/back1.jpg") no-repeat center center;
         background-size: cover;
         position: relative;
         overflow: hidden;
@@ -181,31 +182,27 @@ export default {
     .text h1 {
         font-family: var(--title-font);
         font-size: 2.8rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-weight: 400;
+        
+        /*text-transform: uppercase;*/
+        font-weight: 500;
         color: var(--light-text);
         margin-bottom: .1rem;
         margin-top: -1rem;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         opacity: 0;
         animation: textani .5s .3s linear forwards;
     }
 
     .text h1 span {
         color: var(--accent-color);
-        font-weight: 500;
     }
 
     .text p {
         font-family: var(--main-font);
-        font-weight: 300;
+        font-weight: 400;
         color: var(--light-text);
         font-size: 1.6rem;
-        line-height: 1.3;
         margin-bottom: 2rem;
         opacity: 0;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         animation: textani .5s .5s linear forwards;
     }
     .text div {
@@ -305,6 +302,15 @@ export default {
     .sidesocial div a svg {
         width: 2rem;
         height: auto;
+    }
+
+    .sideone {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 5rem;
+        background-color: var(--main-very-dark-color);
     }
 
     .sideother {
@@ -419,6 +425,9 @@ export default {
     }
 
     @media only screen and (max-width: 830px) {
+        .sideone {
+            display: none;
+        }
         .sidesocial {
             display: none;
         }

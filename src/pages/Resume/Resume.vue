@@ -228,12 +228,12 @@
         text-transform: uppercase;
         font-size: 1.2rem;
         margin-right: .4rem;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .download {
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
         display: flex;
         align-items: center;
         justify-content: center;

@@ -80,7 +80,8 @@ header {
     width: 5rem;
     height: 100vh;
     background-color: var(--main-dark-color);
-    box-shadow: 4px -1px 11px -3px rgba(0,0,0,0.50);
+    background: linear-gradient(90deg, rgba(23,26,38,1) 0%, rgba(26,29,43,1) 100%);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     overflow: hidden;
     z-index: 10000;
 }
@@ -240,6 +241,7 @@ header {
     text-decoration: none;
     color: var(--main-color);
     font-family: var(--main-font);
+    font-size: 1.4rem;
 }
 
 .smallnav-button:focus,

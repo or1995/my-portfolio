@@ -1,9 +1,9 @@
 <template>
     <contact-confirm :show="success">
-        <h3 class="confirmmessage"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.25 16.518l-4.5-4.319 1.396-1.435 3.078 2.937 6.105-6.218 1.421 1.409-7.5 7.626z"/></svg>Message was successfully sent</h3>
+        <h3 class="confirmmessage"><svg class="success" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>Message was successfully sent</h3>
     </contact-confirm>
     <contact-confirm :show="httpError">
-        <h3 class="confirmmessage"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"/></svg>Something went wrong!</h3>
+        <h3 class="confirmmessage"><svg class="fail" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>Something went wrong!</h3>
     </contact-confirm>
     <base-card :scrollan="scrollan" :class="big ? 'fullwidthcard' : null">
         <div class="contactcard" :class="big ? 'big' : null">
@@ -170,7 +170,7 @@ export default {
         overflow: hidden;
         background-color: var(--main-dark-color);
         background: var(--gradient);
-        width: 100%;
+        width: 112rem;
         height: 40rem;
         display: flex;
         align-items: center;
@@ -184,29 +184,30 @@ export default {
 
     .logo {
         position: absolute;
-        bottom: -6rem;
-        left: -5rem;
+        bottom: -10%;
+        right: -20%;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
+        opacity: .5;
     }
 
     .logobig svg {
-        height: 40rem !important;
+        height: 45rem !important;
     }
 
     .logo svg {
-        height: 30rem;
+        height: 40rem;
         fill: var(--main-very-dark-color);
         transition: all .3s;
     }
 
     .o {
-        height: 27rem !important;
+        height: 37rem !important;
     }
 
     .obig svg {
-        height: 38rem !important;
+        height: 42rem !important;
     }
 
     .logobig {
@@ -343,27 +344,16 @@ export default {
     }
 
     .technology {
-        position: absolute;
-        top: 10rem;
-        right: 1rem;
-        width: 50%;
-        transform: rotate(43deg);
+        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         z-index: 100000;
     }
 
     .bigtech {
-        position: relative;
-        top: -2.5rem;
-        right: 2rem;
-        transform: rotate(43deg);
-    }
-
-    .bigtech svg {
-        height: 7rem !important;
+        transform: scale(1.1);
     }
 
     .smalllinks {
@@ -371,17 +361,14 @@ export default {
     }
 
 
-
     #linkedtext {
-        fill: var(--main-very-dark-color);
+        fill: var(--light-text);
         transition: all .3s;
-        animation: lightformlinkone 3s infinite;
     }
 
     #linkedcon {
-        fill: var(--main-very-dark-color);
+        fill: var(--accent-color);
         transition: all .3s;
-        animation: lightformlinktwo 3s infinite;
     }
 
     #linkedlogo {
@@ -393,9 +380,8 @@ export default {
         height: 5rem;
         width: auto;
         margin-bottom: 2rem;
-        fill: var(--main-very-dark-color);
+        fill: var(--light-text);
         transition: all .3s;
-        animation: lightformlinkone 3s .5s infinite;
 
     }
 
@@ -403,45 +389,14 @@ export default {
         height: 5rem;
         width: auto;
         margin-bottom: 2rem;
-        fill: var(--main-very-dark-color);
+        fill: var(--accent-color);
         margin-right: .7rem;
         transition: all .3s;
-        animation: lightformlinktwo 3s .5s infinite;
     }
 
     .linked {
         height: 6rem;
         width: auto;
-    }
-
-    .gita:hover .git {
-        fill: var(--light-text);
-        animation: none;
-        transition: all .3s;
-    }
-
-    .gita:hover .gitlogo {
-        fill: var(--accent-color);
-        animation: none;
-        transition: all .3s;
-    }
-
-    .linkeda:hover #linkedtext {
-        fill: var(--light-text);
-        animation: none;
-        transition: all .3s;
-    }
-
-    .linkeda:hover #linkedcon {
-        fill: var(--accent-color);
-        animation: none;
-        transition: all .3s;
-    }
-
-    .linkeda:hover #linkedlogo {
-        fill: var(--main-dark-color);
-        animation: none;
-        transition: all .3s;
     }
 
     .innertitlehide {
@@ -466,7 +421,7 @@ export default {
 
     .confirmmessage {
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 500;
         font-family: var(--main-font);
         color: var(--main-dark-color);
         display: flex;
@@ -475,10 +430,17 @@ export default {
     }
 
     .confirmmessage svg {
-        fill: var(--main-dark-color);
         margin-right: .5rem;
         height: 1.5rem;
         width: auto;
+    }
+
+    .fail {
+        fill: var(--alert-color);
+    }
+
+    .success {
+        fill: var(--success-color);
     }
 
     @media only screen and (max-width: 1920px) {
@@ -500,16 +462,22 @@ export default {
         }
 
         .technology {
+            transform: scale(.8);
+        }
+
+        .bigtech {
+            transform: scale(.8);
+        }
+    }
+
+    @media only screen and (max-width: 1300px) {
+
+        .technology {
             display: none;
         }
 
         .bigtech {
             display: none;
-        }
-
-        .big {
-            width: 100%;
-            height: 100%;
         }
 
         .smalllinks {
@@ -526,7 +494,6 @@ export default {
             fill: white;
             margin-right: 2rem;
         }
-
     }
 
     @media only screen and (max-width: 970px) { 

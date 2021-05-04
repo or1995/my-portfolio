@@ -132,7 +132,7 @@ export default {
         color: var(--light-text);
         font-weight: 500;
         font-size: 3.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
         z-index: 1000;
     }
 
@@ -145,7 +145,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 1rem;
         z-index: 1000;
     }
 
@@ -153,24 +153,28 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 4px;
-        padding: .4rem 1rem;
+        background-color: var(--accent-color);
+        border-radius: 3px;
+        padding: .6rem 0rem;
+        width: 10.5rem;
         color: var(--light-text);
+        text-decoration: none;
     }
 
     .projectlinks a svg {
-        width: 2.4rem;
+        display: none;
+        width: 1.5rem;
         height: auto;
-        fill: var(--accent-color);
+        fill: var(--main-color);
     }
 
     .projectlinks a h3 {
-        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-size: .9rem;
         font-family: var(--main-font);
-        color: var(--light-text);
+        color: var(--main-color);
         font-weight: 500;
         /*text-transform: uppercase;*/
-        margin-left: .6rem;
         transition: all .3s;
     }
 
@@ -184,9 +188,10 @@ export default {
     }
 
     .projectlinks div svg {
-        width: 2.4rem;
+        display: none;
+        width: 1.5rem;
         height: auto;
-        fill: var(--grey-text);
+        fill: var(--main-light-color);
     }
 
     .projectlinks div h3 {
@@ -200,8 +205,8 @@ export default {
     }
 
     .projectlinks a:hover, 
-    .projectlinks a:hover h3{
-        color: var(--accent-color);
+    .projectlinks a:hover{
+        background-color: var(--accent-light-color);
         transition: all .3s;
     }
 
@@ -276,11 +281,23 @@ export default {
         }
 
         .projectlinks a h3 {
-            font-size: 1rem;
+            font-size: .8rem;
         } 
 
         .projectlinks div h3 {
-            font-size: 1rem;
+            font-size: .8rem;
+        }
+
+        .projectlinks a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            border-radius: 5px;
+            padding: .6rem 0rem;
+            width: 8rem;
+            color: var(--light-text);
+            text-decoration: none;
         }
 }
 

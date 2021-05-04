@@ -27,14 +27,16 @@ export default {
   --light-text: #f0f0f0;
   --grey-text: #e0e0e0;
   --dark-text: #12100E;
+  --main-very-light-color: #273381;
   --main-light-color: #313550;
   --main-color: #2C2F47;
   --main-dark-color: #1A1D2B;
   --main-very-dark-color: #171A26;
-  --accent-light-color: #F5BD6E;
+  --accent-light-color: #f1b45e;
   --accent-color: #F5AF4E;
   --accent-dark-color: #D49844;
   --alert-color: #d72638;
+  --success-color: #017e4a;
 
   /* gradient */
   --gradient: linear-gradient(124deg, rgba(23,26,38,1) 0%, rgba(26,29,43,1) 100%);

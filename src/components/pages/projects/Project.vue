@@ -2,10 +2,12 @@
     <base-card scrollan="fade-up">
         <router-link :to="link" class="project" :style="bordered ? 'border: 5px solid var(--accent-color)' : null">
             <div class="prism" v-if="prism"></div>
-            <slot>
-            </slot>
+            <div class="imgcontainer">
+                <slot>
+                </slot>
+            </div>
             <div class="title" v-if="!hidetitle">
-                <h3>{{title}}</h3>
+                <h3><span>{{titlefirst}} </span>{{titlerest}}</h3>
             </div>
             <div class="overlay"></div>
         </router-link>
@@ -23,6 +25,17 @@ export default {
     computed: {
         link() {
             return '/projects/' + this.title.toLowerCase().replaceAll(' ', '');
+        },
+        titlefirst() {
+            return this.title.split(' ')[0];
+        },
+        titlerest() {
+            const namearr = this.title.split(' ');
+            let rest = ''
+            for(let i = 1;i < namearr.length; i++ ) {
+                rest = rest + ' ' +  namearr[i];
+            }
+            return rest;
         }
     }
 }
@@ -52,6 +65,17 @@ export default {
         z-index: 100000000;
     }
 
+    .imgcontainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        overflow: hidden;
+    }
+
     .project .title {
         transform: translateX(0%);
         transition: all .3s;
@@ -62,19 +86,19 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-        top:70%;
+        bottom: 0;
         left: 0;
-        width: 15rem;
-        height: 3.5rem;
-        background-color: var(--accent-color);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.38);
+        width: 100%;
+        height: 4rem;
+        background-color: var(--main-very-dark-color);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         transform: translateX(-100%);
         transition: all .3s;
         pointer-events: none;
         z-index: 10000000;
     }
 
-    .title::before {
+    /*.title::before {
         content: '';
         position: absolute;
         width: 110%;
@@ -83,27 +107,32 @@ export default {
         height: 100%;
         box-shadow: 0 4px 8px rgba(0,0,0,0.38);
         background-color: var(--main-very-dark-color);
-    }
+    }*/
 
     .title h3 {
         font-family: var(--main-font);
         color: var(--light-text);
-        font-size: 1.2rem;
-        font-weight: 300;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 500;
         z-index: 11000;
-        margin-top: -8%;
-        margin-left: -5%;
+        /*transform: rotate(-90deg);*/
+        white-space: nowrap;
+    }
+
+    .title h3 span {
+        color: var(--accent-color);
     }
 
     .overlay {
-        opacity: 0.1;
+        opacity: .2;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 9000;
-        background-color: #000;
+        z-index: 9000000;
+        background-color: var(--main-very-light-color);
         pointer-events: none;
         transition: all .3s;
     }
@@ -117,11 +146,6 @@ export default {
     @media only screen and (max-width: 1366px) {
         .project {
             height: 14rem;
-        }
-
-        .title {
-            width: 11rem;
-            height: 3rem;
         }
 
         .title h3 {
@@ -138,11 +162,6 @@ export default {
     @media only screen and (max-width: 750px) {
         .project {
             height: 22rem;
-        }
-
-        .title {
-            width: 15rem;
-            height: 3.5rem;
         }
 
         .title h3 {
