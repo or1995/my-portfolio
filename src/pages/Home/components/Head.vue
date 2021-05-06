@@ -1,6 +1,7 @@
 <template>
     <base-card>
         <div class="head" >
+            <svg id="visual" viewBox="0 0 960 540"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g stroke-width="1" stroke-linejoin="bevel"><path d="M540.6 244L531.6 171L413.4 255Z" fill="#171a26" stroke="#171a26"></path><path d="M531.6 171L390.4 119L413.4 255Z" fill="#181b27" stroke="#181b27"></path><path d="M413.4 255L566.6 368L540.6 244Z" fill="#181b28" stroke="#181b28"></path><path d="M540.6 244L672.7 154L531.6 171Z" fill="#1a1d2a" stroke="#1a1d2a"></path><path d="M566.6 368L663.7 286L540.6 244Z" fill="#191c2a" stroke="#191c2a"></path><path d="M663.7 286L672.7 154L540.6 244Z" fill="#181b28" stroke="#181b28"></path><path d="M531.6 171L417.4 0L390.4 119Z" fill="#171a27" stroke="#171a27"></path><path d="M262.3 233L399.4 411L413.4 255Z" fill="#191c2a" stroke="#191c2a"></path><path d="M413.4 255L399.4 411L566.6 368Z" fill="#171a26" stroke="#171a26"></path><path d="M390.4 119L262.3 233L413.4 255Z" fill="#181b28" stroke="#181b28"></path><path d="M560.6 0L417.4 0L531.6 171Z" fill="#191c29" stroke="#191c29"></path><path d="M390.4 119L240.3 107L262.3 233Z" fill="#1a1d2b" stroke="#1a1d2b"></path><path d="M672.7 154L560.6 0L531.6 171Z" fill="#171a26" stroke="#171a26"></path><path d="M254.3 0L240.3 107L390.4 119Z" fill="#181b27" stroke="#181b27"></path><path d="M565.6 540L717.7 388L566.6 368Z" fill="#181b27" stroke="#181b27"></path><path d="M566.6 368L717.7 388L663.7 286Z" fill="#191c2a" stroke="#191c2a"></path><path d="M663.7 286L801.9 272L672.7 154Z" fill="#181b28" stroke="#181b28"></path><path d="M136.1 236L247.3 413L262.3 233Z" fill="#171a26" stroke="#171a26"></path><path d="M262.3 233L247.3 413L399.4 411Z" fill="#181b28" stroke="#181b28"></path><path d="M417.4 0L254.3 0L390.4 119Z" fill="#1a1d2a" stroke="#1a1d2a"></path><path d="M672.7 154L720.7 0L560.6 0Z" fill="#181b28" stroke="#181b28"></path><path d="M858.9 106L720.7 0L672.7 154Z" fill="#191c2a" stroke="#191c2a"></path><path d="M244.3 540L426.4 540L399.4 411Z" fill="#181b28" stroke="#181b28"></path><path d="M399.4 411L565.6 540L566.6 368Z" fill="#171a26" stroke="#171a26"></path><path d="M717.7 388L801.9 272L663.7 286Z" fill="#191c2a" stroke="#191c2a"></path><path d="M426.4 540L565.6 540L399.4 411Z" fill="#181b28" stroke="#181b28"></path><path d="M240.3 107L136.1 236L262.3 233Z" fill="#191c29" stroke="#191c29"></path><path d="M133.1 115L136.1 236L240.3 107Z" fill="#181b29" stroke="#181b29"></path><path d="M131.1 0L133.1 115L240.3 107Z" fill="#181b29" stroke="#181b29"></path><path d="M794.9 540L804.9 387L717.7 388Z" fill="#191c2a" stroke="#191c2a"></path><path d="M717.7 388L804.9 387L801.9 272Z" fill="#181b28" stroke="#181b28"></path><path d="M565.6 540L699.7 540L717.7 388Z" fill="#181b28" stroke="#181b28"></path><path d="M247.3 413L244.3 540L399.4 411Z" fill="#191c29" stroke="#191c29"></path><path d="M127.1 540L244.3 540L247.3 413Z" fill="#181b28" stroke="#181b28"></path><path d="M960 152L858.9 106L801.9 272Z" fill="#181b29" stroke="#181b29"></path><path d="M801.9 272L858.9 106L672.7 154Z" fill="#181b29" stroke="#181b29"></path><path d="M254.3 0L131.1 0L240.3 107Z" fill="#181b27" stroke="#181b27"></path><path d="M0 292L98.1 383L136.1 236Z" fill="#181b29" stroke="#181b29"></path><path d="M136.1 236L98.1 383L247.3 413Z" fill="#1a1d2a" stroke="#1a1d2a"></path><path d="M0 292L136.1 236L0 132Z" fill="#181b28" stroke="#181b28"></path><path d="M858.9 106L859.9 0L720.7 0Z" fill="#171a27" stroke="#171a27"></path><path d="M699.7 540L794.9 540L717.7 388Z" fill="#181b29" stroke="#181b29"></path><path d="M804.9 387L960 265L801.9 272Z" fill="#181b27" stroke="#181b27"></path><path d="M98.1 383L127.1 540L247.3 413Z" fill="#1a1d2a" stroke="#1a1d2a"></path><path d="M0 132L136.1 236L133.1 115Z" fill="#171a26" stroke="#171a26"></path><path d="M98.1 383L0 540L127.1 540Z" fill="#181b28" stroke="#181b28"></path><path d="M0 0L0 132L133.1 115Z" fill="#1a1d2b" stroke="#1a1d2b"></path><path d="M960 435L960 265L804.9 387Z" fill="#171a27" stroke="#171a27"></path><path d="M858.9 106L960 0L859.9 0Z" fill="#181b29" stroke="#181b29"></path><path d="M960 265L960 152L801.9 272Z" fill="#1a1d2b" stroke="#1a1d2b"></path><path d="M0 292L0 400L98.1 383Z" fill="#1a1d2b" stroke="#1a1d2b"></path><path d="M131.1 0L0 0L133.1 115Z" fill="#191c2a" stroke="#191c2a"></path><path d="M960 152L960 0L858.9 106Z" fill="#1a1d2a" stroke="#1a1d2a"></path><path d="M794.9 540L960 435L804.9 387Z" fill="#181b29" stroke="#181b29"></path><path d="M0 400L0 540L98.1 383Z" fill="#171a26" stroke="#171a26"></path><path d="M794.9 540L960 540L960 435Z" fill="#191c29" stroke="#191c29"></path></g></svg>
             <div class="logo-wrapper">
                 <div class="logo" ref="logo">
                     <svg  viewBox="0 0 170 203" fill="none" xmlns="http://www.w3.org/2000/svg" overflow="visible">
@@ -113,14 +114,20 @@ export default {
         width: 100%;
         border-radius: 5px;
         height: calc(100vh - 2rem); /* maybe will be 40rem */
-        background:  linear-gradient(124deg, rgba(23,26,38,.995) 0%, rgba(26,29,43,.995) 100%), url("../../../assets/back/back1.jpg") no-repeat center center;
-        background-size: cover;
+        background:  linear-gradient(124deg, rgba(23,26,38,.995) 0%, rgba(26,29,43,.995) 100%);
         position: relative;
         overflow: hidden;
         transition: all .3s;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    #visual {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 110vh;
     }
     
     .logo {
@@ -237,7 +244,7 @@ export default {
     }
 
     .overlaylogo {
-        opacity: .5;
+        opacity: 0;
         position: absolute;
         bottom: 15rem;
         right: -23rem;
@@ -264,7 +271,7 @@ export default {
         height: 14rem;
         /*background-color: var(--main-very-dark-color);*/
         left:0;
-        top: calc(50% - 7rem);
+        top: calc(50% - 6.5rem);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -305,6 +312,7 @@ export default {
     }
 
     .sideone {
+        opacity: 0;
         position: absolute;
         top: 0;
         left: 0;
@@ -344,6 +352,10 @@ export default {
 
         .text h1 {
             font-size: 2rem;
+        }
+
+        .text p {
+            font-size: 1.5rem;
         }
 
     }

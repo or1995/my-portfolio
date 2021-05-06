@@ -61,6 +61,13 @@ export default {
         transition: all .3s;
     }
 
+    @media only screen and (max-width: 1400px) {
+        .normalbutton {
+            padding:0.6rem 1.5rem;
+            font-size: .9rem;
+        }
+    }
+
     @media only screen and (max-width: 500px) { 
         .normalbutton {
             padding:0.6rem 1.5rem;
