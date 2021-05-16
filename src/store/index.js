@@ -29,7 +29,7 @@ export default createStore({
                     home: true,
                     tech: ['Python Django', 'Django Template Engine', 'Postgresql DataBase', 'Vanilla JavaScript', 'CSS, CSS Grids, CSS FlexBox, Media Queries'],
                     features: ['Responsive Design', 'Image Upload', 'Authentication, Sign up and log in', 'Image Compression', 'Pagination', 'Follow, like and comment', 'Carousel (Built using vanilla javascript only)', 'Django Admin Dashboard'],
-                    url: 'http://ec2-3-142-156-72.us-east-2.compute.amazonaws.com'
+                    url: 'http://ec2-18-116-53-60.us-east-2.compute.amazonaws.com'
                 },
                 {
                     name: 'Social Media App',
