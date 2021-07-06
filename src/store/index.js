@@ -17,7 +17,7 @@ export default createStore({
                     home: true,
                     tech: ['React, React Router, React Redux','Python Django, Django Rest Api', 'Postgresql DataBase', 'CSS, CSS Grids, CSS FlexBox, Media Queries'],
                     features: ['Responsive Design', 'Cart Functionality', 'Infinite Scroll', 'Sorting Items', 'Carousel (Built using vanilla javascript only)', 'Django Admin Dashboard'],
-                    url: 'http://ec2-3-141-166-241.us-east-2.compute.amazonaws.com'
+                    url: 'http://ec2-52-14-230-240.us-east-2.compute.amazonaws.com'
                 },                    
 
                 {
@@ -52,6 +52,16 @@ export default createStore({
                     tech: ['Vue, Vue Router, Vuex', 'CSS, CSS Grids, CSS FlexBox, Media Queries'],
                     features: ['Responsive Design', 'Dark Theme'],
                     url: 'https://omaralidev.com'
+                },
+                {
+                    name: 'Snake Game',
+                    premium: true,
+                    projectImage: "snake",
+                    projectHeaderImage: "snakeheader",
+                    tech: ['React, React Hooks, CSS FlexBox, Media Queries'],
+                    features: ['Responsive Design', 'Score System', 'Gsap Animations'],
+                    url: 'https://dazzling-hugle-9c4f0c.netlify.app',
+                    source: 'https://github.com/or1995/React-Snake-Game'
                 },
                 {
                     name: 'University Website',
