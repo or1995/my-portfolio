@@ -60,7 +60,7 @@ export default createStore({
                     projectHeaderImage: "snakeheader",
                     tech: ['React, React Hooks, CSS FlexBox, Media Queries'],
                     features: ['Responsive Design', 'Score System', 'Gsap Animations'],
-                    url: 'https://dazzling-hugle-9c4f0c.netlify.app',
+                    url: 'https://snakegameomarali.netlify.app',
                     source: 'https://github.com/or1995/React-Snake-Game'
                 },
                 {
