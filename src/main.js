@@ -18,4 +18,10 @@ app.component('base-spinner', Spinner);
 app.use(router);
 app.use(store);
 
+if (window.Cypress) {
+    window.app = app
+}
+
 app.mount('#app');
+
+
